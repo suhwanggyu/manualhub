@@ -11,7 +11,7 @@
 </template>
 <script>
 import PlusButton from "./PlusButton.vue"
-	
+import {CLICK_LIST} from './store.js'
 	
 export default{
 	name:"SearchList",
@@ -24,8 +24,15 @@ export default{
 			return this.$store.state.listDatas.filter(dat=>{
 				return dat.text.toLowerCase().includes(this.$store.state.search.toLowerCase())
 			})
-		}
+		},
 		
+	},
+	methods:{
+	clickList(Data){
+			let selectedNum=Data.index
+			this.$store.commit(CLICK_LIST, selectedNum)
+		
+		}
 	}
 	
 	
@@ -45,7 +52,7 @@ export default{
 		margin:0;
 		padding:0px;
 		line-height:50%;
-		}
+	}
 	li{
 	list-style:none;
 	line-height:200%;
