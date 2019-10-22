@@ -23,5 +23,14 @@ export default {
 </script>
 
 <style>
-
+	div .TopHeader{
+		margin:0px;
+		background-color:#888;
+		
+	}
+	
+	
+	
+	
+	
 </style>
