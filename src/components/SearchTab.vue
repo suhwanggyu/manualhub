@@ -1,14 +1,11 @@
 <template>
 	<div class="SearchTab">
-		<input placeholder="search" v-model="searchContent">
-		<button class="searchBtn" type="submit" @click="clickSearchBtn">검색하기</button>
+		<el-input class="searchinput" placeholder="Please input" v-model="searchContent" @keyup.enter.native="clickSearchBtn"></el-input>
+		<el-button class="searchBtn" type="submit" @click="clickSearchBtn" >검색하기</el-button>
 	</div>
 </template>
 <script>
-	
-	
-	
-	import {CLICK_SEARCH} from './store.js';
+import {CLICK_SEARCH} from './store.js';
 	
 export default{
 	name:"SearchTab",
@@ -26,6 +23,7 @@ export default{
 			//console.log('클릭 서치1')
 			this.$store.commit(CLICK_SEARCH,this.searchContent)
 		},
+
 		
 		
 		
@@ -37,9 +35,15 @@ export default{
 </script>
 <style>
 	.searchBtn{
-		float:right;
+		float : right;
+		width : 30%;
+		padding : 10px 10px;
+		height : 40px;
 	}
 	
+	.searchinput{
+		width : 70%;
+	}
 	
 	
 	

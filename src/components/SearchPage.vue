@@ -23,8 +23,8 @@ export default{
 </script>
 <style>
 	#SearchPage{
-	
 		box-sizing: border-box;
+		padding:0;
 	}
 	
 	
