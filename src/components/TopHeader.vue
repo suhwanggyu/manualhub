@@ -19,7 +19,14 @@ export default {
   .el-header{
     background-color: #B3C0D1;
     color: #333;
-    text-align: center;
     line-height: 60px;
+    font-family : "Hiragino Sans GB";
+    font-size : 30px;
+  }
+
+  #TopHeader .el-icon-user{
+    float : right;
+    line-height : 2.5;
+    font-size: x-large;
   }
 </style>

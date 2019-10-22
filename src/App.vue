@@ -10,7 +10,9 @@
 </template>
 
 <script>
-
+	
+	
+import store from './components/store.js'
 
 import TopHeader from './components/TopHeader.vue';
 	
@@ -21,6 +23,7 @@ import MainFooter from './components/MainFooter.vue';
 
 
 export default {
+store,
   name: 'app',
   components: {
 	'top-header' : TopHeader,
@@ -31,6 +34,14 @@ export default {
 </script>
 
 <style>
+<<<<<<< HEAD
+=======
+	@import "https://use.fontawesome.com/releases/v5.6.3/css/all.css";
+	div .TopHeader{
+		margin:0px;
+		background-color:#888;
+	}
+>>>>>>> d5c83a8e5fcb8f11d60d6eb8b295475ecee02398
 	body{
 		margin : 0;
 		padding : 0;
