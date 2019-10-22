@@ -30,7 +30,6 @@ export default {
 	#MainContent{
 		width:100%;
 		height: 600px;
-		border: 1px solid #000;
 		margin:0px;
 	}
 	

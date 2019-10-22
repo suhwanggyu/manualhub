@@ -14,7 +14,6 @@ export default{
 <style>
 	#DocumentPage{
 		box-sizing: border-box;
-		border: 1px solid #000;
 	}	
 	
 	
