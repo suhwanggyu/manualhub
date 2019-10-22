@@ -1,6 +1,6 @@
 <template>
-	<div>
-		hello
+	<div class="TopHeader">
+		<p>Manual Hub</p>
 	</div>
 
 
