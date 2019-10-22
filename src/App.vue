@@ -35,7 +35,7 @@ store,
 
 <style>
 	@import "https://use.fontawesome.com/releases/v5.6.3/css/all.css";
-	div .TopHeader{
+	.TopHeader{
 		margin:0px;
 		background-color:#888;
 	}

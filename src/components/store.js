@@ -35,7 +35,7 @@ export default new Vuex.Store({
 			
 		},],
 		search:'',
-		
+		selected:null,
 		
 		
 	},
