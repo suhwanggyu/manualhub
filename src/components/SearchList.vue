@@ -31,8 +31,6 @@ export default{
 }	
 </script>
 <style>
-<<<<<<< HEAD
-=======
 	.PlusButton{
 		float:right;
 		width:40px;
@@ -53,17 +51,12 @@ export default{
 	border:2px solid #000;
 	}
 
->>>>>>> d5c83a8e5fcb8f11d60d6eb8b295475ecee02398
 	#SearchList {
 		background-color: #E9EEF3;
 		color: #333;
 		text-align: center;
 		line-height: 160px;
-<<<<<<< HEAD
- 	 }
-=======
-				}
->>>>>>> d5c83a8e5fcb8f11d60d6eb8b295475ecee02398
+		}
 	
 	
 </style>

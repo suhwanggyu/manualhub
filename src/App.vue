@@ -34,14 +34,6 @@ store,
 </script>
 
 <style>
-<<<<<<< HEAD
-=======
-	@import "https://use.fontawesome.com/releases/v5.6.3/css/all.css";
-	div .TopHeader{
-		margin:0px;
-		background-color:#888;
-	}
->>>>>>> d5c83a8e5fcb8f11d60d6eb8b295475ecee02398
 	body{
 		margin : 0;
 		padding : 0;
