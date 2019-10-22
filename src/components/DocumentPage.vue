@@ -1,5 +1,5 @@
 <template>
-	<div class="DocumentPage">
+	<div id="DocumentPage">
 		DocumentPage
 	</div>
 </template>
@@ -12,7 +12,9 @@ export default{
 }	
 </script>
 <style>
-
+	#DocumentPage{
+		box-sizing: border-box;
+	}	
 	
 	
 </style>
