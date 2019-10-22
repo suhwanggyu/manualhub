@@ -1,8 +1,8 @@
 <template>
-	<div class="SearchList">
+	<el-main id="SearchList">
 		
 
-	</div>
+	</el-main>
 </template>
 <script>
 export default{
@@ -15,7 +15,12 @@ export default{
 }	
 </script>
 <style>
-
+	#SearchList {
+		background-color: #E9EEF3;
+		color: #333;
+		text-align: center;
+		line-height: 160px;
+ 	 }
 	
 	
 </style>

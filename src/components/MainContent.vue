@@ -1,8 +1,10 @@
 <template>
-	<div class="MainContent">
-		<search-page></search-page>
-		<document-page></document-page>
-	</div>
+	<el-main id="MainContent">
+		<el-row>
+			<el-col :span="8"><search-page class="grid-content bg-purple"></search-page></el-col>
+			<el-col :span="16"><document-page class="grid-content bg-purple-light"></document-page></el-col>
+		</el-row>
+	</el-main>
 
 
 </template>
@@ -25,30 +27,49 @@ export default {
 </script>
 
 <style>
-	div .MainContent{
+	#MainContent{
 		width:100%;
 		height: 600px;
 		border: 1px solid #000;
 		margin:0px;
 	}
 	
-	
-	div .SearchPage{
-		float:left;
-		width:30%;
-		box-sizing: border-box;
-		border: 1px solid #000;
+	.el-main{
+		min-height : 1000px;
 	}
-	div .DocumentPage{
-		float:right;
-		width:70%;
-		box-sizing: border-box;
-		border: 1px solid #000;
-		
-		
-	}	
+
+	#MainContent{
+		padding : 0px;
+	}
 	
+	.clear{
+		clear:both;
+	}
 	
-	
-	
+	.el-row {
+		margin-bottom: 20px;
+		&:last-child {
+		margin-bottom: 0;
+		}
+	}
+  .el-col {
+    border-radius: 4px;
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .grid-content {
+    border-radius: 4px;
+    min-height: 1000px;
+  }
+  .row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
+  }
 </style>

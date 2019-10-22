@@ -1,7 +1,7 @@
 <template>
-	<div class="SearchPage">
+	<el-main id="SearchPage">
 		searchPage
-	</div>
+	</el-main>
 </template>
 <script>
 export default{
@@ -13,7 +13,10 @@ export default{
 }	
 </script>
 <style>
-
+	#SearchPage{
+	
+		box-sizing: border-box;
+	}
 	
 	
 </style>
