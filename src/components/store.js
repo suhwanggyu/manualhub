@@ -6,7 +6,8 @@ Vue.use(Vuex);
 export const CLICK_SEARCH ='CLICK_SEARCH'
 export const CLICK_LIST = 'CLICK_LIST'
 export const CLICK_MODE = 'CLICK_MODE'
-export const FIND_CLICKED_INDEX='FIND_CLICKED_INDEX'
+export const CLICK_MODIFY= 'CLICK_MODIFY'
+export const FIND_INDEX='FIND_INDEX'
 export default new Vuex.Store({
 	state:{
 		//vue의 data와 같은것   computed 에서 불러서 사용하면됨
@@ -59,12 +60,8 @@ export default new Vuex.Store({
 		},],
 		search:'',
 		selected:null,
+		selectedDocument:null,
 		documentMode:false,
-		
-		
-		
-		
-		
 		listDocuments:[{
 			index:0,
 			text:"P-999K 사용절차와 설명이다.P-999K 사용절차와 설명이다.P-999K 사용절차와 설명이다.P-999K 사용절차와 설명이다.P-999K 사용절차와 설명이다.P-999K 사용절차와 설명이다.P-999K 사용절차와 설명이다.P-999K 사용절차와 설명이다.P-999K 사용절차와 설명이다.P-999K 사용절차와 설명이다.P-999K 사용절차와 설명이다.P-999K 사용절차와 설명이다.P-999K 사용절차와 설명이다.P-999K 사용절차와 설명이다.P-999K 사용절차와 설명이다."
@@ -118,7 +115,7 @@ export default new Vuex.Store({
 		//vuex의 methods와 같은것
 		[CLICK_SEARCH](state,searchContent){
 			//console.log("클릭서치2")
-			state.search=searchContent
+			state.search=searchContent	
 			
 		},
 		[CLICK_LIST](state,selecteIndex){
@@ -127,14 +124,16 @@ export default new Vuex.Store({
 		[CLICK_MODE](state,selectedMode){
 			state.documentMode=selectedMode
 		},
-		[FIND_CLICKED_INDEX](state){
+		[CLICK_MODIFY](state,title){
+				state.listDatas[state.selected].text=title
+				//글 수정하기도 추가해야함
+		},
+		[FIND_INDEX](state){
+			state.selectedDocument=state.listDocuments.filter(x => x.index===state.selected)[0].index
 
-			if(state.selected===null){
-				return null
-			}
-			let index=state.listDocuments.findIndex(x=> x.index===state.selected)
-			return index
 		}
+
+
 		
 	}
 	

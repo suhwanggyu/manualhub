@@ -14,10 +14,7 @@
 			<!-- 수정버튼을 누른 후!-->
 		<form>
 			<edit-mode/>
-			<fieldset>
-				<textarea v-model="changingDocument">
-				</textarea>
-			</fieldset>
+			<document-editor/>
 			
 		</form>
 			
@@ -30,12 +27,13 @@
 <script>
 	import ReadMode from './ReadMode.vue'
 	import EditMode from './EditMode.vue'
-	
+	import DocumentEditor from './DocumentEditor.vue'
 export default{
 	name:"DocumentPage",
 	components:{
 			'read-mode':ReadMode,
 			'edit-mode':EditMode,
+			'document-editor':DocumentEditor,
 		}
 		,
 	computed:{

@@ -11,8 +11,7 @@
 </template>
 <script>
 import PlusButton from "./PlusButton.vue"
-import {CLICK_LIST} from './store.js'
-	
+import {CLICK_LIST, FIND_INDEX} from './store.js'
 export default{
 	name:"SearchList",
 	components:{
@@ -36,7 +35,7 @@ export default{
 			
 			let selectedNum = receiver_id.index;
 			this.$store.commit(CLICK_LIST, selectedNum)
-		
+			this.$store.commit(FIND_INDEX)
 		}
 	}
 	
