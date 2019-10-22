@@ -11,7 +11,6 @@ import TopHeader from './components/TopHeader.vue'
 	
 import MainContent from './components/MainContent.vue'
 
-import MainFooter from './components/MainFooter.vue'
 export default {
   name: 'app',
   components: {
