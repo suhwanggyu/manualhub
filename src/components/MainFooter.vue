@@ -1,6 +1,6 @@
 <template>
 	<div>
-		footer
+		footer - digital right
 	</div>
 
 
