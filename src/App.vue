@@ -36,7 +36,7 @@ var router = new VueRouter({
 
 export default {
 	store,
-	el: 'app',
+	name: 'app',
 	router : router,
 	components: {
 		TopHeader,
