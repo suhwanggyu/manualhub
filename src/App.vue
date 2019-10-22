@@ -34,11 +34,7 @@ store,
 </script>
 
 <style>
-	
-	.TopHeader{
-		margin:0px;
-		background-color:#888;
-	}
+
 	body{
 		margin : 0;
 		padding : 0;
