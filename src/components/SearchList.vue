@@ -1,6 +1,6 @@
 <template>
 	<div id="SearchList">
-		<el-table :data="listDatas" height="100%" style="width: 100%" min-height="100%" @row-click="clickList(index)">
+		<el-table :data="listDatas" height="100%" style="width: 100%" min-height="100%" @row-click="clickList">
 			<el-table-column :span="18" prop="text" label="title" min-width="260">
 			</el-table-column>
 			<el-table-column :span="6" prop="name" label="Name" min-width="100">
@@ -27,9 +27,14 @@ export default{
 		},
 		
 	},
+	data:function(){
+		return {
+		}
+	},
 	methods:{
-	clickList(Data){
-			let selectedNum=Data.index
+	clickList(receiver_id){
+			
+			let selectedNum = receiver_id.index;
 			this.$store.commit(CLICK_LIST, selectedNum)
 		
 		}

@@ -89,6 +89,26 @@ export default new Vuex.Store({
 			index:4,
 			text:"P-999K 사용절차와 수리방법"
 			
+		},
+		{
+			index:5,
+			text:"P-999K 사용절차와 수리방법"
+			
+		},
+		{
+			index:6,
+			text:"P-999K 사용절차와 수리방법"
+			
+		},
+		{
+			index:7,
+			text:"P-999K 사용절차와 수리방법"
+			
+		},
+		{
+			index:8,
+			text:"P-999K 사용절차와 수리방법"
+			
 		},	
 		]
 		
