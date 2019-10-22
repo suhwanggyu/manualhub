@@ -1,8 +1,8 @@
 <template>
 	<el-main id="MainContent">
 		<el-row>
-			<el-col :span="8"><search-page class="grid-content bg-purple"></search-page></el-col>
-			<el-col :span="16"><document-page class="grid-content bg-purple-light"></document-page></el-col>
+			<el-col :span="7" min-width="500px"><search-page class="grid-content bg-purple"></search-page></el-col>
+			<el-col :span="17"><document-page class="grid-content bg-purple-light"></document-page></el-col>
 		</el-row>
 	</el-main>
 

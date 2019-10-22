@@ -1,7 +1,7 @@
 <template>
 	<div class="SearchTab">
-		<input placeholder="search" v-model="searchContent">
-		<button class="searchBtn" type="submit" @click="clickSearchBtn">검색하기</button>
+		<el-input class="searchinput" placeholder="Please input" v-model="searchContent" @keyup.enter.native="clickSearchBtn"></el-input>
+		<el-button class="searchBtn" type="submit" @click="clickSearchBtn" >검색하기</el-button>
 	</div>
 </template>
 <script>
@@ -37,9 +37,15 @@ export default{
 </script>
 <style>
 	.searchBtn{
-		float:right;
+		float : right;
+		width : 30%;
+		padding : 10px 10px;
+		height : 40px;
 	}
 	
+	.searchinput{
+		width : 70%;
+	}
 	
 	
 	

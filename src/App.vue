@@ -3,7 +3,7 @@
 
 	<el-container id="app" class="is-vertical">
 		<top-header></top-header>
-		<main-content></main-content>
+		<router-view></router-view>
 		<main-footer></main-footer>
 	</el-container>
   
@@ -13,23 +13,35 @@
 	
 	
 import store from './components/store.js'
-
 import TopHeader from './components/TopHeader.vue';
-	
 import MainContent from './components/MainContent.vue';
-
+import LoginContent from './components/LoginContent.vue';
+import NewsContent from './components/NewsContent.vue';
 import MainFooter from './components/MainFooter.vue';
+import VueRouter from 'vue-router';
 
+var router = new VueRouter({
+	routes:[{
+		path: '/news',
+		component : NewsContent
+	},{
+		path: '/login',
+		component : LoginContent
+	},{
+		path: '/read',
+		component : MainContent
+	}]
 
+});
 
 export default {
-store,
-  name: 'app',
-  components: {
-	'top-header' : TopHeader,
-	'main-content':MainContent,
-	'main-footer':MainFooter,
-  }
+	store,
+	el: 'app',
+	router : router,
+	components: {
+		TopHeader,
+		MainFooter,
+	}
 }
 </script>
 
