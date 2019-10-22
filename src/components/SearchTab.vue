@@ -5,10 +5,7 @@
 	</div>
 </template>
 <script>
-	
-	
-	
-	import {CLICK_SEARCH} from './store.js';
+import {CLICK_SEARCH} from './store.js';
 	
 export default{
 	name:"SearchTab",
@@ -26,6 +23,7 @@ export default{
 			//console.log('클릭 서치1')
 			this.$store.commit(CLICK_SEARCH,this.searchContent)
 		},
+
 		
 		
 		
