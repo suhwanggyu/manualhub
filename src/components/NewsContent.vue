@@ -17,6 +17,5 @@ export default {
 		width:100%;
 		height: 600px;
 		margin:0px;
-        background:
 	}
 </style>
