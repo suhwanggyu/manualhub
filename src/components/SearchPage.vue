@@ -1,8 +1,8 @@
 <template>
-	<div class="SearchPage">
+	<el-main id="SearchPage">
 		<search-tab/>
 		<search-list/>
-	</div>
+	</el-main>
 </template>
 <script>
 	import SearchList from "./SearchList.vue"
@@ -22,13 +22,10 @@ export default{
 }	
 </script>
 <style>
-	div .SearchTab{
-		border:2px solid #000;
-		
-		
-	}
+	#SearchPage{
 	
-
+		box-sizing: border-box;
+	}
 	
 	
 </style>

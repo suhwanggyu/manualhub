@@ -1,10 +1,10 @@
 <template>
-	<div class="SearchList">
-		<ul>
-			<li v-for="listData in listDatas" :key="listData.index">{{listData.text}}</li>
-		</ul>
+	<el-main id="SearchList">
+			<ul>
+				<li v-for="listData in listDatas" :key="listData.index">{{listData.text}}</li>
+			</ul>
 			<plus-button></plus-button>
-	</div>
+	</el-main>
 </template>
 <script>
 import PlusButton from "./PlusButton.vue"
@@ -31,7 +31,7 @@ export default{
 }	
 </script>
 <style>
-	div .PlusButton{
+	.PlusButton{
 		float:right;
 		width:40px;
 		height:40px;
@@ -43,15 +43,20 @@ export default{
 		margin:0;
 		padding:0px;
 		line-height:50%;
-		
-	}
+		}
 	li{
 	list-style:none;
 	line-height:200%;
-	
 	background-color:#f5f5f5;
 	border:2px solid #000;
 	}
+
+	#SearchList {
+		background-color: #E9EEF3;
+		color: #333;
+		text-align: center;
+		line-height: 160px;
+				}
 	
 	
 </style>
