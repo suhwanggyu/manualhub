@@ -47,12 +47,15 @@ export default {
 
 <style>
 
-	body{
+	html,body{
 		margin : 0;
 		padding : 0;
+		height:100%;
 	}
 	
-	
+	.el-container{
+		height: 100%;
+	}
 	
 	
 	

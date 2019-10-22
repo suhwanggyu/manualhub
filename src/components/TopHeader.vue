@@ -23,15 +23,14 @@ export default {
 </script>
 
 <style>
-  .el-header{
-    background-color: #B3C0D1;
-    color: #333;
-    line-height: 60px;
-    font-family : "Hiragino Sans GB";
-    font-size : 30px;
-  }
   #TopHeader{
     padding-left : 100px;
+    background-color: #fff;
+    color: #333;
+    line-height: 60px;
+    font-family : "Arial";
+    font-weight : bold;
+    font-size : 30px;
   }
   #TopHeader #titlename{
     padding-right : 100px;

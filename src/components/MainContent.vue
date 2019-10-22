@@ -1,8 +1,8 @@
 <template>
 	<el-main id="MainContent">
 		<el-row>
-			<el-col :span="7" min-width="500px"><search-page class="grid-content bg-purple"></search-page></el-col>
-			<el-col :span="17"><document-page class="grid-content bg-purple-light"></document-page></el-col>
+			<el-col :span="7" min-width="500px"><search-page class="grid-content"></search-page></el-col>
+			<el-col :span="17"><document-page class="grid-content"></document-page></el-col>
 		</el-row>
 	</el-main>
 
@@ -29,12 +29,12 @@ export default {
 <style>
 	#MainContent{
 		width:100%;
-		height: 600px;
+		height: 100%;
 		margin:0px;
 	}
 	
-	.el-main{
-		min-height : 1000px;
+	.el-main, .el-col, .el-row{
+		height:100%;
 	}
 
 	#MainContent{
@@ -46,13 +46,14 @@ export default {
 	}
 	
 	.el-row {
-		margin-bottom: 20px;
+		margin-bottom: 0;
 		&:last-child {
 		margin-bottom: 0;
 		}
 	}
   .el-col {
     border-radius: 4px;
+	position: relative;
   }
   .bg-purple-dark {
     background: #99a9bf;
@@ -65,7 +66,7 @@ export default {
   }
   .grid-content {
     border-radius: 4px;
-    min-height: 1000px;
+    height:100%;
   }
   .row-bg {
     padding: 10px 0;
