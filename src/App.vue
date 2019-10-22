@@ -46,13 +46,15 @@ export default {
 </script>
 
 <style>
-	body{
+
+	html,body{
 		margin : 0;
 		padding : 0;
+		height:100%;
 	}
 	
-	ul, li {
-		list-style : none;
+	.el-container{
+		height: 100%;
 	}
 	
 	
