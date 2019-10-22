@@ -1,14 +1,14 @@
 <template>
 	<el-main id="SearchList">
 			<ul>
-				<li v-for="listData in listDatas" :key="listData.index">{{listData.text}}</li>
+				<li v-for="listData in listDatas" :key="listData.index" @click="clickList(listData)">{{listData.text}}</li>
 			</ul>
 			<plus-button></plus-button>
 	</el-main>
 </template>
 <script>
 import PlusButton from "./PlusButton.vue"
-	
+import {CLICK_LIST} from './store.js'
 	
 export default{
 	name:"SearchList",
@@ -21,8 +21,15 @@ export default{
 			return this.$store.state.listDatas.filter(dat=>{
 				return dat.text.toLowerCase().includes(this.$store.state.search.toLowerCase())
 			})
-		}
+		},
 		
+	},
+	methods:{
+	clickList(Data){
+			let selectedNum=Data.index
+			this.$store.commit(CLICK_LIST, selectedNum)
+		
+		}
 	}
 	
 	
