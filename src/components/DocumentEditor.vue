@@ -15,7 +15,8 @@ export default {
 
   },
   mounted(){
-    this.$store.state.editorRef=this.$refs.editorRef
+    console.log(this.$refs.editorRef)
+    this.$store.state.editRef=this.$refs.editorRef
   }
 };
 </script>

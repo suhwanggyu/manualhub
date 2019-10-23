@@ -51,7 +51,11 @@ export default new Vuex.Store({
 			{
 				id : "kokoja4",
 				password : "Rhkswptlf1908!"
-			}
+			},
+			{
+				id : "1",
+				password : "1"
+			},
 		]
 		
 		
@@ -63,7 +67,7 @@ export default new Vuex.Store({
 		},
 		[CLICK_LIST](state){
 			//리스트를 클릭시 히스토리 인덱스는 다시 고쳐져야한다.
-			state.historyIndex = 0
+			state.historyIndex = state.listDocuments[state.selectedDocument].history.length-1
 			//케라우저도 돌려줘야한다.
 			state.caraRef.setActiveItem(state.historyIndex)
 
@@ -84,6 +88,20 @@ export default new Vuex.Store({
 				//글이 히스토리가 새로 추가된다!     날짜와 사람이름이 변경되어야함!
 				//히스토리 0번 인덱스에 추가되야한다!
 
+				//console.log("추가하기 전 : ", state.listDocuments[state.selectedDocument].history.length)
+				//console.log(state.editRef)
+				let temp=state.listhistorys[state.selectedDocument].historys
+				temp.push({
+					index:temp.length,
+					text:state.editRef.value,
+					date:'2019/10/23',
+					author:'중사 김무협'
+				})
+				Vue.set(state.listhistorys[state.selectedDocument],'historys',temp)
+
+				
+				//console.log("추가하기 후 : ", state.listDocuments[state.selectedDocument].history.length)
+
 
 		},
 		[FIND_INDEX](state){
@@ -99,6 +117,7 @@ export default new Vuex.Store({
 		},
 		[CHANGE_CARAOUSEL](state){
 			//주의! 수정모드를 다녀오면, ref가 안먹힌다.
+			console.log("케라우저")
 			state.caraRef.setActiveItem(state.historyIndex)
 		},
 		[CHANGE_SELECT](state){
