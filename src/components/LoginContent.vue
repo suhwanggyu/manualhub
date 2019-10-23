@@ -11,7 +11,7 @@
 
 <script>
 
-import { SUCCESS_LOGIN } from './store.js';
+import { SUCCESS_LOGIN,LOGIN_UPDATE } from './store.js';
 
 export default {
     
@@ -34,6 +34,8 @@ export default {
                     this.$router.push({
                         name: 'Main' 
                     });
+                    this.$store.commit(LOGIN_UPDATE,index)
+                    
                 }else{
                     alert('Login Please!');
                     this.id = "";
