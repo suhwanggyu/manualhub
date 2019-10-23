@@ -15,6 +15,9 @@ export const CHANGE_CARAOUSEL='CHANGE_CARAOUSEL'
 export const CHANGE_SELECT='CHANGE_SELECT'
 export const ALL_CLEAR='ALL_CLEAR'
 export const LODE_FILE='LODE_FILE'
+
+export const LOGIN_UPDATE='LOGIN_UPDATE'
+
 export const CLICK_HIST='CLICK_HIST'
 
 export default new Vuex.Store({
@@ -26,15 +29,16 @@ export default new Vuex.Store({
 		documentMode:false,
 		
 		loginstate:false,
-		
-		
-		
+		loginIndex:null
+		,
 		historyIndex:0,
 
 		caraRef:null,
 		elSelectRef:null,
 		editRef:null,
 		listHistorys:[],
+
+		
 		onHistory:false,
 		textLog:[
 		{
@@ -76,24 +80,63 @@ export default new Vuex.Store({
 		users:[
 			{
 				id : "1",
-				password : "1"
+				rank:"일병",
+				name:"이종법",
+				password : "1",
+				department_id:1,
 			},
 			{
-				id : "kokoja2",
-				password : "Rhkswptlf1908!"
+				id : "kokoja2",	
+				rank:"일병",
+				name:"김종법",
+				password : "Rhkswptlf1908!",
+				department_id:0,
 			},
 			{
 				id : "kokoja3",
-				password : "Rhkswptlf1908!"
+				rank:"일병",
+				name:"일종법",
+				password : "Rhkswptlf1908!",
+				department_id:2,
 			},
 			{
 				id : "kokoja4",
-				password : "Rhkswptlf1908!"
+				rank:"일병",
+				name:"일종법",
+				password : "Rhkswptlf1908!",
+				department_id:2,
+			},
+		],
+		department:[
+			{
+				department_id:0,
+				dept_name:"정보통신과 무선통신",
+				dept_head:"상사 윤선중",
+				dept_numberOfPeople:10,
+
 			},
 			{
-				id : "1",
-				password : "1"
+				department_id:1,
+				dept_name:"정보통신과",
+				dept_head:"통신과장 김민규",
+				dept_numberOfPeople:30,
+
 			},
+			{
+				department_id:2,
+				dept_name:"전술 C4I 운용병",
+				dept_head:"소위 전준표",
+				dept_numberOfPeople:5,
+
+			},
+			{
+				department_id:3,
+				dept_name:"정작참모처 화생병과",
+				dept_head:"화생방통제관 김시홍",
+				dept_numberOfPeople:5,
+
+
+			}
 		]
 		
 		
@@ -180,6 +223,9 @@ export default new Vuex.Store({
 			state.listHistorys = listHist.listHistory.map((items) => {
 				return items;
 			});
+		},
+		[LOGIN_UPDATE](state,recentIndex){
+			state.loginIndex=recentIndex
 		}
 		
 	}

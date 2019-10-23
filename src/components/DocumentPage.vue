@@ -12,7 +12,6 @@
 		<form>
 			<edit-mode/>
 			<document-editor/>
-			
 		</form>
 			
 		
