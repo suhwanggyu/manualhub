@@ -8,6 +8,10 @@ export const CLICK_LIST = 'CLICK_LIST'
 export const CLICK_MODE = 'CLICK_MODE'
 export const CLICK_MODIFY= 'CLICK_MODIFY'
 export const FIND_INDEX='FIND_INDEX'
+export const SET_HISTORY='SET_HISTORY'
+export const CHANGE_CARAOUSEL='CHANGE_CARAOUSEL'
+export const CHANGE_SELECT='CHANGE_SELECT'
+export const ALL_CLEAR='ALL_CLEAR'
 export default new Vuex.Store({
 	state:{
 		//vue의 data와 같은것   computed 에서 불러서 사용하면됨
@@ -71,19 +75,55 @@ export default new Vuex.Store({
 		selected:null,
 		selectedDocument:null,
 		documentMode:false,
+		historyIndex:0,
+
+		caraRef:null,
+		elSelectRef:null,
+		editRef:null
+		,
 		listDocuments:[{
 			index:0,
-			history:[{index : 0 , text : "<h3>aa</h3>여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회"},{index : 1 , text : "여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회2"},{index : 2 , text : "여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회3"}]
+			text:"대충 p999k 설명을 하는중임"
+			,
+			history:[
+			{index : 0 , text : "<h1>0번 인덱스</h1>",
+						date:"2019/10/01",
+						name:"중사 김근영"},
+			{index : 1 , text : "1번 인덱스"
+						,date:"2019/10/02",
+						name:"중사 김근영"},
+			{index : 2 , text : "2번 인덱스"
+						, date:"2019/10/03",
+						name:"중사 김근영"}]
 			
 		},
 		{
 			index:1,
-			text:"여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다.여단화상회의 pc 설명이다."
-			
+			text:"대충 여단화상회의 설명"
+, history:[{index : 0 , text : "0번 인덱스",
+			date:"2019/10/01",
+			name:"중사 김근영"},
+{index : 1 , text : "1번 인덱스"
+			,date:"2019/10/02",
+			name:"중사 김근영"},
+{index : 2 , text : "2번 인덱스"
+			, date:"2019/10/03",
+			name:"중사 김근영"}]
+
 		},
 		{
 			index:2,
-			text:"P-999K 사용절차와 수리방법"
+			text:"P-999K 사용절차와 수리방법",
+			history:[{index : 0 , text : "P999K 설명1",
+			date:"2019/10/01",
+			name:"중사 김근영"},
+{index : 1 , text : "P999K 설명2"
+			,date:"2019/10/02",
+			name:"중사 김근영"},
+{index : 2 , text : "P999K 설명3"
+			, date:"2019/10/03",
+			name:"중사 김근영"}]
+
 			
 		},
 		{
@@ -123,25 +163,56 @@ export default new Vuex.Store({
 	mutations:{
 		//vuex의 methods와 같은것
 		[CLICK_SEARCH](state,searchContent){
-			//console.log("클릭서치2")
 			state.search=searchContent	
-			
 		},
-		[CLICK_LIST](state,selecteIndex){
-			state.selected=selecteIndex
+		[CLICK_LIST](state){
+			//리스트를 클릭시 히스토리 인덱스는 다시 고쳐져야한다.
+			state.historyIndex = 0
+			//케라우저도 돌려줘야한다.
+			state.caraRef.setActiveItem(state.historyIndex)
+
+			//수정 필요
+			state.elSelectRef.elSelected=state.listDocuments[state.selectedDocument].history[state.historyIndex].date +" "+state.listDocuments[state.selectedDocument].history[state.historyIndex].name
 		},
 		[CLICK_MODE](state,selectedMode){
 			state.documentMode=selectedMode
 		},
 		[CLICK_MODIFY](state,title){
+				//수정버튼 눌렀을시
+
+				//1. 제목변경
 				state.listDatas[state.selected].text=title
-				//글 수정하기도 추가해야함
+
+
+				//2. 글 수정하기
+				//글이 히스토리가 새로 추가된다!     날짜와 사람이름이 변경되어야함!
+				//히스토리 0번 인덱스에 추가되야한다!
+				state.listDocuments[state.selectedDocument].text=state.editorRef.value
+
+
 		},
 		[FIND_INDEX](state){
 			state.selectedDocument=state.listDocuments.filter(x => x.index===state.selected)[0].index
 
+		},
+		[SET_HISTORY](state,historyGet){
+			state.historyIndex = historyGet
+		},
+		[CHANGE_CARAOUSEL](state){
+			//주의! 수정모드를 다녀오면, ref가 안먹힌다.
+			state.caraRef.setActiveItem(state.historyIndex)
+		},
+		[CHANGE_SELECT](state){
+			state.elSelectRef.elSelected=state.listDocuments[state.selectedDocument].history[state.historyIndex].date +" "+state.listDocuments[state.selectedDocument].history[state.historyIndex].name
+		},
+		[ALL_CLEAR](state){
+				//라우트로 전환시 데이터들을 초기로 돌려줘야한다.
+				state.historyIndex = 0;
+				state.selected=null;
+				state.documentMode=false;
+				state.selectedDocument=null;
+				state.search='';
 		}
-
 
 		
 	}

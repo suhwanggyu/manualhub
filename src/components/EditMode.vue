@@ -2,10 +2,6 @@
 	<div id="EditMode">
 		<Button type="submit" @click="onClickModify">수정</Button>
 		<input :value="documentTitle" ref="titleInput"/>
-		<Button type="submit">그림 버튼</Button>
-		<Button type="submit">글씨체</Button>
-		<Button type="submit">태그</Button>
-		<Button type="submit">글씨색</Button>
 	</div>
 </template>
 <script>
