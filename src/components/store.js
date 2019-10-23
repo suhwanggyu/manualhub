@@ -93,13 +93,13 @@ export default new Vuex.Store({
 			text:"대충 p999k 설명을 하는중임"
 			,
 			history:[
-			{index : 0 , text : "<h1>0번 인덱스</h1>",
+			{index : 0 , text : "0번인덱스",
 						date:"2019/10/01",
 						name:"중사 김근영"},
 			{index : 1 , text : "1번 인덱스"
 						,date:"2019/10/02",
 						name:"중사 김근영"},
-			{index : 2 , text : "2번 인덱스"
+			{index : 2 , text : "<h1>0번 인덱스</h1></br><h3>P-999K는 현재 상비사단급에서는 편제가 완료되었다. 도약방식을 도입하여 보안성을 강화하고 ECCM(대전자전능력)을 향상시켰다. 보병연대에서는 중대급 제대에 2대씩 편제되어 있으며, 그 상위제대 (대대, 연대)까지의 통신은 이 장비가 담당한다. 또한 연대 지원중대나 대대 화기중대 같은 경우는 소대급, 혹은 포마다 편제되어 있다. 단순한 평문통신 기능 이외에도 대한민국 육군의 각종 데이터 연동 장비는 PRC-999K와 연동될 것을 전제하고 만들어지기 때문에 후에 나오는 각종 연동장비들의 중계 역할을 담당하기도 한다.</h3><img src='https://w.namu.la/s/b52e302a8141c9c14c8127760cbc1359133b852d5aef7fac90c9b6bbdd467a5453a90b6b05c0b2112812a5bedc604d01edcec9b3a84167cfee9cb5b8cf3427954ea180ebf597f2c8396f3db9381daec2010d162dd04f18f4d6cf557bd8bd8806'></img>"
 						, date:"2019/10/03",
 						name:"중사 김근영"}]
 			
@@ -182,7 +182,11 @@ export default new Vuex.Store({
 			{
 				id : "kokoja4",
 				password : "Rhkswptlf1908!"
-			}
+			},
+			{
+				id : "1",
+				password : "1"
+			},
 		]
 		
 		
@@ -194,7 +198,7 @@ export default new Vuex.Store({
 		},
 		[CLICK_LIST](state){
 			//리스트를 클릭시 히스토리 인덱스는 다시 고쳐져야한다.
-			state.historyIndex = 0
+			state.historyIndex = state.listDocuments[state.selectedDocument].history.length-1
 			//케라우저도 돌려줘야한다.
 			state.caraRef.setActiveItem(state.historyIndex)
 
@@ -214,7 +218,20 @@ export default new Vuex.Store({
 				//2. 글 수정하기
 				//글이 히스토리가 새로 추가된다!     날짜와 사람이름이 변경되어야함!
 				//히스토리 0번 인덱스에 추가되야한다!
-				state.listDocuments[state.selectedDocument].text=state.editorRef.value
+
+				//console.log("추가하기 전 : ", state.listDocuments[state.selectedDocument].history.length)
+				//console.log(state.editRef)
+				let temp=state.listDocuments[state.selectedDocument].history
+				temp.push({
+					index:temp.length,
+					text:state.editRef.value,
+					date:'2019/10/23',
+					name:'중사 김무협'
+				})
+				Vue.set(state.listDocuments[state.selectedDocument],'history',temp)
+
+				
+				//console.log("추가하기 후 : ", state.listDocuments[state.selectedDocument].history.length)
 
 
 		},
@@ -231,6 +248,7 @@ export default new Vuex.Store({
 		},
 		[CHANGE_CARAOUSEL](state){
 			//주의! 수정모드를 다녀오면, ref가 안먹힌다.
+			console.log("케라우저")
 			state.caraRef.setActiveItem(state.historyIndex)
 		},
 		[CHANGE_SELECT](state){

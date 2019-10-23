@@ -37,7 +37,7 @@ export default{
 				return ' '
 			}
 			let index=stat.listDocuments.findIndex(x=> x.index===stat.selected)
-			return stat.listDatas[index]
+			return stat.listDocuments[index]
 		},
 		documentData(){
 			let stat =this.$store.state

@@ -1,7 +1,7 @@
 <template>
-	<div id="EditMode">
-		<Button type="submit" @click="onClickModify">수정</Button>
-		<input :value="documentTitle" ref="titleInput"/>
+	<div>
+		<el-button id="submitButton" type="primary" @click="onClickModify">수정하기</el-button>
+		<input id="titleInput" :value="documentTitle" ref="titleInput"/>
 	</div>
 </template>
 <script>
@@ -11,7 +11,6 @@ export default{
 	name:"EditMode",
 	computed:{
 		documentTitle(){
-			
 			let stat =this.$store.state
 			if(stat.selected===null){
 				return ' '
@@ -43,11 +42,30 @@ export default{
 }	
 </script>
 <style>
-	#EditMode{
-		/* 배경색깔은 컴포넌트 구별을 위해 넣었습니다. 제거해도 됩니다.  */
-		background:#888;
-		
+	#submitButton{
+		display: inline-block;
+		width:20%;
+		padding:5px;
+		height:30px;
+		margin:0 0 5px 0;
 	}
+	#titleInput{
+		display: inline-block;
+		width:80%;
+		height:30px;
+		border:2px solid #aaa;
+		border-radius:4px;
+		margin:0 0 1px 0;
+		outline:none;
+		padding:8px;
+		box-sizing:border-box;
+		transition:0.3s
+	}
+	#titleInput:focus{
+		border-color:dodgerBlue;
+		box-shadow:0 0 8px 0 dodgerBlue;
+	}
+	
 	
 	
 </style>
