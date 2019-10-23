@@ -67,7 +67,7 @@ export default new Vuex.Store({
 		},
 		[CLICK_LIST](state){
 			//리스트를 클릭시 히스토리 인덱스는 다시 고쳐져야한다.
-			state.historyIndex = state.listDocuments[state.selectedDocument].history.length-1
+			state.historyIndex = state.listHistorys[state.selectedDocument].historys.length-1
 			//케라우저도 돌려줘야한다.
 			state.caraRef.setActiveItem(state.historyIndex)
 
@@ -90,14 +90,14 @@ export default new Vuex.Store({
 
 				//console.log("추가하기 전 : ", state.listDocuments[state.selectedDocument].history.length)
 				//console.log(state.editRef)
-				let temp=state.listhistorys[state.selectedDocument].historys
+				let temp=state.listHistorys[state.selectedDocument].historys
 				temp.push({
 					index:temp.length,
 					text:state.editRef.value,
 					date:'2019/10/23',
 					author:'중사 김무협'
 				})
-				Vue.set(state.listhistorys[state.selectedDocument],'historys',temp)
+				Vue.set(state.listHistorys[state.selectedDocument],'historys',temp)
 
 				
 				//console.log("추가하기 후 : ", state.listDocuments[state.selectedDocument].history.length)

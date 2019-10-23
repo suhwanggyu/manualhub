@@ -6,7 +6,7 @@
 			<span id="textTitle">{{title.title}}</span>
 			<el-select :value="elSelected" placeholder="히스토리" @input="dispatch" ref="elSelect">
 				<el-option
-						v-for="item in documentData.history"
+						v-for="item in documentData.historys"
 						:key="item.index"
 						:value="item.index">{{item.date}}</el-option>
 			</el-select>
@@ -14,7 +14,7 @@
 		<div class="line">
 			작성자명 
 			<el-divider direction="vertical"/>
-			<span id="textAuthor">{{title.historys[0].author}}</span>
+			<span id="textAuthor">{{title.historys[length].author}}</span>
 			<el-divider direction="vertical"/>
 			날짜
 			<el-divider direction="vertical"/>
@@ -34,10 +34,13 @@ export default{
 		title(){
 			let stat =this.$store.state
 			if(stat.selected===null){
-				return ' '
+				return {historys:[{author:""}]}
 			}
 			let index=stat.listHistorys.findIndex(x=> x.index===stat.selected)
 			return stat.listHistorys[index]
+		},
+		length(){
+			return this.title.historys.length -1;
 		},
 		documentData(){
 			let stat =this.$store.state
