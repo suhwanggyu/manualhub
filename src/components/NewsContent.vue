@@ -2,10 +2,8 @@
 	<el-main id="NewsContent" class="grid-content bg-purple-light">
 	
 	<el-col class="newsframe" :span="12">
-		
 		<new-news/>
 		<recent-read/>
-
 	</el-col>
 	<el-col class="newsframe" :span="12">
 		<department-info/>
