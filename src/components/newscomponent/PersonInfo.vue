@@ -1,6 +1,6 @@
 <template>
     <div id="PersonInfo">
-        <el-divider content-position="left">사용자 정보</el-divider>
+        사용자 정보
     <el-table id="RecentTable" :data="findUserName" style="width: 100%">
         <el-table-column :span="18" label="이름" prop="name" min-width="260">
         </el-table-column>
@@ -35,8 +35,8 @@ export default {
 
 <style>
 #PersonInfo{
-    margin: 10px 0px 0px 10px;
-    padding:10px;
+    height: 25%;
+    margin : 0;
 }
 
 

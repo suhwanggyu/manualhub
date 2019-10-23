@@ -1,33 +1,35 @@
 <template>
 	<el-main id="NewsContent" class="grid-content bg-purple-light">
 	
-	<el-col class="newsframe" :span="12">
-		
-		<new-news/>
-		<recent-read/>
+		<el-col class="newsframe" :span="12">
+			<department-info/>
+			<person-info/>
+			<new-news/>
+		</el-col>
+		<el-col class="newsframe" :span="12">
+			<depart-member/>
+			<recent-read/>
+		</el-col>
 
-	</el-col>
-	<el-col class="newsframe" :span="12">
-		<department-info/>
-		<person-info/>
-	</el-col>
 
-
-</el-main>
+	</el-main>
 
 </template>
 
 <script>
 import NewNews from './newscomponent/Newnews.vue'
 import RecentRead from './newscomponent/RecentRead.vue'
-import DefartmentInfo from './newscomponent/DepartmentInfo.vue'
+import DepartmentInfo from './newscomponent/DepartmentInfo.vue'
 import PersonInfo from './newscomponent/PersonInfo.vue'
+import DepartMember from '/newscomponent/DepartMember.vue'
+
 export default {
 components:{
 	'new-news':NewNews,
 	'recent-read':RecentRead,
-	'department-info':DefartmentInfo,
+	'department-info':DepartmentInfo,
 	'person-info':PersonInfo,
+	'depart-member' : DepartMember
 }
 
 
@@ -40,15 +42,18 @@ components:{
 <style>
     #NewsContent{
 		width:100%;
-		height: 600px;
+		height: 100%;
 		margin:0px;
-		background-color:#ccc;
+		padding : 0%;
+		background-color:#fff;
 		font-family:"Helvetica Neue";
 
 	}
+	.newsframe{
+		height : 100%;
+	}
 
-	.newframe .el-main{
-		width : 100px;
-		height : 100px;
+	.el-table{
+		overflow: auto;
 	}
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div id="DepartMentInfo">
-    <el-divider content-position="left">부서 정보</el-divider>
+        부서 정보
         <div id="imgLine">
             <img id="departImg" :src="findImage">
             <p>부서 : {{findDepart.dept_name}}</p>
@@ -45,23 +45,17 @@ export default {
 <style>
     #DepartMentInfo{
         overflow: hidden;
-        margin:10px;
+        height : 25%;
     }
 
     #departImg{
         float:left;
         width:100px;
         height:100px;
-
-        
     }
     #imgLine{ 
         padding :15px;
     }
-    #imgLine p{
-        margin : 0px 0px 15px 0px;
-    }
-
 
 
 </style>

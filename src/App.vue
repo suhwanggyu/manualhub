@@ -19,6 +19,7 @@ import VueRouter from 'vue-router';
 import { LODE_FILE } from './components/store.js';
 
 var router = new VueRouter({
+	mode : 'history',
 	routes:[{
 		path: '/news',
 		name : 'News',

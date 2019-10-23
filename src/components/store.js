@@ -76,6 +76,108 @@ export default new Vuex.Store({
 			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
 			history_index : 1
 		},
+		{
+			date:'2019.8.8',
+			author:'중사 김민형',
+			index:0,
+			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
+			history_index : 1
+		},
+		{
+			date:'2019.8.8',
+			author:'중사 김민형',
+			index:0,
+			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
+			history_index : 1
+		},
+		{
+			date:'2019.8.8',
+			author:'중사 김민형',
+			index:0,
+			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
+			history_index : 1
+		},
+		{
+			date:'2019.8.8',
+			author:'중사 김민형',
+			index:0,
+			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
+			history_index : 1
+		},
+		{
+			date:'2019.8.8',
+			author:'중사 김민형',
+			index:0,
+			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
+			history_index : 1
+		},
+		],
+		readLog:[	
+			{
+				date:'2019.10.01',
+				author:'소위 한서준',
+				index:1,
+				title:"여단화상회의 PC 접속방법과 군단회의 접속",
+			},
+			{
+				date:'2019.10.01',
+				author:'중위 위대한',
+				index:0,
+				title:"P-999K 사용절차와 수리방법",
+			},
+			{
+				date:'2019.10.01',
+				author:'중위 위대한',
+				index:0,
+				title:"P-999K 사용절차와 수리방법",
+			},
+			{
+				date:'2019.10.01',
+				author:'중위 위대한',
+				index:0,
+				title:"P-999K 사용절차와 수리방법",
+			},
+			{
+				date:'2019.10.01',
+				author:'중위 위대한',
+				index:0,
+				title:"P-999K 사용절차와 수리방법",
+			},
+			{
+				date:'2019.10.01',
+				author:'중위 위대한',
+				index:0,
+				title:"P-999K 사용절차와 수리방법",
+			},
+			{
+				date:'2019.10.01',
+				author:'중위 위대한',
+				index:0,
+				title:"P-999K 사용절차와 수리방법",
+			},
+			{
+				date:'2019.10.01',
+				author:'중위 위대한',
+				index:0,
+				title:"P-999K 사용절차와 수리방법",
+			},
+			{
+				date:'2019.10.01',
+				author:'중위 위대한',
+				index:0,
+				title:"P-999K 사용절차와 수리방법",
+			},
+			{
+				date:'2019.10.01',
+				author:'중위 위대한',
+				index:0,
+				title:"P-999K 사용절차와 수리방법",
+			},{
+				date:'2019.10.02',
+				author:'중위 위대한',
+				index:0,
+				title:"P-999K 사용절차와 수리방법",
+			},
 		],
 		users:[
 			{
