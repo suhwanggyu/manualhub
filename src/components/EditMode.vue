@@ -1,7 +1,8 @@
 <template>
-	<div>
+	<div id="EditMode">
+		<span>글 제목 : </span>
+		<el-input id="titleInput" v-model="titleIn"></el-input>
 		<el-button id="submitButton" type="primary" @click="onClickModify">수정하기</el-button>
-		<input id="titleInput" :value="documentTitle" ref="titleInput"/>
 	</div>
 </template>
 <script>
@@ -9,6 +10,11 @@
 	import {CLICK_MODIFY} from './store.js'
 export default{
 	name:"EditMode",
+	data:function(){
+		return {
+			titleIn:""
+		}
+	},
 	computed:{
 		documentTitle(){
 			let stat =this.$store.state
@@ -29,37 +35,39 @@ export default{
 				return
 			}
 
-
-			let modifiedTitle=this.$refs.titleInput.value
 			this.$store.commit(CLICK_MODE,false)
-			this.$store.commit(CLICK_MODIFY,modifiedTitle)
+			this.$store.commit(CLICK_MODIFY,this.titleIn);
 
 
 		},
 	},
-	
+	created:function(){
+		this.titleIn = this.documentTitle;
+	}
 	
 }	
 </script>
 <style>
 	#submitButton{
-		display: inline-block;
-		width:20%;
+		display: inline;
+		width:100px;
 		padding:5px;
 		height:30px;
 		margin:0 0 5px 0;
 	}
+
 	#titleInput{
-		display: inline-block;
-		width:80%;
-		height:30px;
-		border:2px solid #aaa;
-		border-radius:4px;
-		margin:0 0 1px 0;
-		outline:none;
-		padding:8px;
-		box-sizing:border-box;
-		transition:0.3s
+		display: inline;
+	}
+	#EditMode .el-input{
+		width : 70%;
+		margin : 2px 20px 2px 10px;
+	}
+	#EditMode span{
+		width : 5%;
+		font-size: 15px;
+		font-family: "Arial";
+		font-weight: bold;
 	}
 	#titleInput:focus{
 		border-color:dodgerBlue;

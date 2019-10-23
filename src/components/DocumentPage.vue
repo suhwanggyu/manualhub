@@ -59,5 +59,7 @@ export default{
 	#DocumentPage{
 		box-sizing: border-box;
 	}	
-
+	#DocumentPage form{
+		height:100%;
+	}
 </style>
