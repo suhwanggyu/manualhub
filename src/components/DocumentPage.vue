@@ -50,11 +50,7 @@ export default{
 		historyList(){
 			let stat =this.$store.state;
 			if(stat.selected===null){
-<<<<<<< HEAD
 				return {length:1}
-=======
-				return { length : 1}
->>>>>>> upstream/master
 			}
 			let index=stat.listDocuments.findIndex(x=> x.index===stat.selected);
 			return stat.listDocuments[index].history
