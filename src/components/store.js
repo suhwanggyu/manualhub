@@ -191,11 +191,12 @@ export default new Vuex.Store({
 				console.log("추가하기 전 : ", state.listDocuments[state.selectedDocument].history.length)
 				state.listDocuments[state.selectedDocument].history.unshift(
 				{
-					index:state.listDocuments[state.selectedDocument].history.length,
+					index:0,
 					text:state.editRef.value,
 					date:'2019/10/23',
 					name:'중사 김무협'
 				}
+				//나머지 인덱스는 모두 하나씩 증가 시키기
 
 					
 					)
