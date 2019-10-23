@@ -40,79 +40,7 @@ export default new Vuex.Store({
 
 		
 		onHistory:false,
-		textLog:[
-		{
-			date:'2019.10.29',
-			author:'일병 이종법',
-			index:0,
-			comment:'P-999K 신형 사진으로 교체, 교신방법 오타 수정',
-			history_index : 2
-		},
-		{
-			date:'2019.8.8',
-			author:'중사 김민형',
-			index:1,
-			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
-			history_index : 0
-		},
-		{
-			date:'2019.8.8',
-			author:'중사 김민형',
-			index:0,
-			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
-			history_index : 0
-		},
-		{
-			date:'2019.8.8',
-			author:'중사 김민형',
-			index:1,
-			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
-			history_index : 1
-		},
-		{
-			date:'2019.8.8',
-			author:'중사 김민형',
-			index:0,
-			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
-			history_index : 1
-		},
-		{
-			date:'2019.8.8',
-			author:'중사 김민형',
-			index:0,
-			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
-			history_index : 1
-		},
-		{
-			date:'2019.8.8',
-			author:'중사 김민형',
-			index:0,
-			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
-			history_index : 1
-		},
-		{
-			date:'2019.8.8',
-			author:'중사 김민형',
-			index:0,
-			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
-			history_index : 1
-		},
-		{
-			date:'2019.8.8',
-			author:'중사 김민형',
-			index:0,
-			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
-			history_index : 1
-		},
-		{
-			date:'2019.8.8',
-			author:'중사 김민형',
-			index:0,
-			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
-			history_index : 1
-		},
-		],
-		readLog:[	
+			readLog:[
 			{
 				date:'2019.10.01',
 				author:'소위 한서준',
@@ -125,59 +53,70 @@ export default new Vuex.Store({
 				index:0,
 				title:"P-999K 사용절차와 수리방법",
 			},
-			{
-				date:'2019.10.01',
-				author:'중위 위대한',
-				index:0,
-				title:"P-999K 사용절차와 수리방법",
-			},
-			{
-				date:'2019.10.01',
-				author:'중위 위대한',
-				index:0,
-				title:"P-999K 사용절차와 수리방법",
-			},
-			{
-				date:'2019.10.01',
-				author:'중위 위대한',
-				index:0,
-				title:"P-999K 사용절차와 수리방법",
-			},
-			{
-				date:'2019.10.01',
-				author:'중위 위대한',
-				index:0,
-				title:"P-999K 사용절차와 수리방법",
-			},
-			{
-				date:'2019.10.01',
-				author:'중위 위대한',
-				index:0,
-				title:"P-999K 사용절차와 수리방법",
-			},
-			{
-				date:'2019.10.01',
-				author:'중위 위대한',
-				index:0,
-				title:"P-999K 사용절차와 수리방법",
-			},
-			{
-				date:'2019.10.01',
-				author:'중위 위대한',
-				index:0,
-				title:"P-999K 사용절차와 수리방법",
-			},
-			{
-				date:'2019.10.01',
-				author:'중위 위대한',
-				index:0,
-				title:"P-999K 사용절차와 수리방법",
-			},{
-				date:'2019.10.02',
-				author:'중위 위대한',
-				index:0,
-				title:"P-999K 사용절차와 수리방법",
-			},
+			],
+		textLog:[
+		{
+			date:'2019.10.29',
+			author:'일병 이종법',
+			index:1,
+			comment:'P-999K 신형 사진으로 교체, 교신방법 오타 수정',
+			history_index : 2
+		},		{
+			date:'2019.10.29',
+			author:'일병 이종법',
+			index:1,
+			comment:'P-999K 신형 사진으로 교체, 교신방법 오타 수정',
+			history_index : 1
+		},
+		{
+			date:'2019.8.8',
+			author:'중사 김민형',
+			index:2,
+			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
+			history_index : 0
+		},
+		{
+			date:'2019.8.8',
+			author:'중사 김민형',
+			index:2,
+			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
+			history_index : 1
+		},
+		{
+			date:'2019.8.8',
+			author:'중사 김민형',
+			index:0,
+			comment:'입사지원서 양식입니다. 올려주세요',
+			history_index : 0
+		},
+		{
+			date:'2019.10.24',
+			author:'일병 이종법',
+			index:0,
+			comment:'본부대 일병 이종법 입사지원서 제출 했습니다.',
+			history_index : 1
+		},
+		{
+			date:'2019.10.24',
+			author:'일병 김명훈',
+			index:0,
+			comment:'김명훈 입사지원서 제출 했습니다.',
+			history_index : 2
+		},
+		{
+			date:'2019.10.25',
+			author:'일병 김민석',
+			index:0,
+			comment:'김민석 입사지원서 제출 했습니다.',
+			history_index : 3
+		},
+		{
+			date:'2019.10.26',
+			author:'일병 김지훈',
+			index:0,
+			comment:'김지훈 입사지원서 제출 했습니다.',
+			history_index : 4
+		},
 		],
 		users:[
 			{
