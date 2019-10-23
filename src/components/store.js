@@ -6,6 +6,8 @@ Vue.use(Vuex);
 export const CLICK_SEARCH ='CLICK_SEARCH'
 export const CLICK_LIST = 'CLICK_LIST'
 export const CLICK_MODE = 'CLICK_MODE'
+export const FIND_CLICKED_INDEX='FIND_CLICKED_INDEX'
+export const SUCCESS_LOGIN = 'SUCCESS_LOGIN'
 export const CLICK_MODIFY= 'CLICK_MODIFY'
 export const FIND_INDEX='FIND_INDEX'
 export const SET_HISTORY='SET_HISTORY'
@@ -75,6 +77,11 @@ export default new Vuex.Store({
 		selected:null,
 		selectedDocument:null,
 		documentMode:false,
+		
+		loginstate:false,
+		
+		
+		
 		historyIndex:0,
 
 		caraRef:null,
@@ -156,6 +163,26 @@ export default new Vuex.Store({
 			text:"P-999K 사용절차와 수리방법"
 			
 		},	
+		],
+
+
+		users:[
+			{
+				id : "kokoja",
+				password : "Rhkswptlf1908!"
+			},
+			{
+				id : "kokoja2",
+				password : "Rhkswptlf1908!"
+			},
+			{
+				id : "kokoja3",
+				password : "Rhkswptlf1908!"
+			},
+			{
+				id : "kokoja4",
+				password : "Rhkswptlf1908!"
+			}
 		]
 		
 		
@@ -208,6 +235,10 @@ export default new Vuex.Store({
 			state.selectedDocument=state.listDocuments.filter(x => x.index===state.selected)[0].index
 
 		},
+
+		[SUCCESS_LOGIN](state){
+			state.loginstate = true;
+		},
 		[SET_HISTORY](state,historyGet){
 			state.historyIndex = historyGet
 		},
@@ -229,11 +260,4 @@ export default new Vuex.Store({
 
 		
 	}
-	
-	
-	
-	
-	
-	
-	
 });

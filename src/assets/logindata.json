@@ -1,0 +1,20 @@
+{
+    "users":[
+        {
+            "id" : "kokoja",
+            "password" : "Rhkswptlf1908!"
+        },
+        {
+            "id" : "kokoja2",
+            "password" : "Rhkswptlf1908!"
+        },
+        {
+            "id" : "kokoja3",
+            "password" : "Rhkswptlf1908!"
+        },
+        {
+            "id" : "kokoja4",
+            "password" : "Rhkswptlf1908!"
+        }
+    ]
+}

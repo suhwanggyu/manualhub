@@ -31,7 +31,7 @@ export default{
 		}
 	},
 	methods:{
-	clickList(receiver_id){
+		clickList(receiver_id){
 			
 			let selectedNum = receiver_id.index;
 			//selected 업데이트
