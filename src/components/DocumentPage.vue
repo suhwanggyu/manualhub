@@ -4,7 +4,7 @@
 		<template v-if="editing===false">
 			<!-- 수정버튼을 누르기전!-->
 			<read-header/>
-			<el-carousel arrow="always" :autoplay=false :initial-index="historyIndex" @change="navi" ref="cara">
+			<el-carousel arrow="always" :autoplay=false :initial-index="historyList.length - 1" @change="navi" ref="cara">
 				<el-carousel-item  v-for="item in historyList" :key="item.index">
 					<p v-html="item.text">{{ item.text }}</p>
 				</el-carousel-item>
@@ -47,7 +47,7 @@ export default{
 		historyList(){
 			let stat =this.$store.state;
 			if(stat.selected===null){
-				return null
+				return { length : 1}
 			}
 			let index=stat.listDocuments.findIndex(x=> x.index===stat.selected);
 			return stat.listDocuments[index].history

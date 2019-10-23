@@ -4,16 +4,12 @@
 			<span>글제목</span>
 			<el-divider direction="vertical"/> 
 			<span id="textTitle">{{title.text}}</span>
-<<<<<<< HEAD
-			<el-select value="1"></el-select>
-=======
 			<el-select :value="elSelected" placeholder="히스토리" @input="dispatch" ref="elSelect">
 				<el-option
 						v-for="item in documentData.history"
 						:key="item.index"
 						:value="item.index">{{item.date}}</el-option>
 			</el-select>
->>>>>>> a8c91eb0c01c0005bfe11054f8201cfd36af1669
 		</div>
 		<div class="line">
 			작성자명 

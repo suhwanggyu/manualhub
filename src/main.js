@@ -10,11 +10,8 @@ Vue.prototype.$Axios = axios;
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 Vue.use(VueRouter);
-<<<<<<< HEAD
-=======
 Vue.use(Vue2Editor);
 Vue.config.productionTip = false
->>>>>>> a8c91eb0c01c0005bfe11054f8201cfd36af1669
 
 new Vue({
   render: h => h(App),
