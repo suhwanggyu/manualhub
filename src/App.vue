@@ -78,7 +78,9 @@ export default {
 </script>
 
 <style>
-
+	html{
+		min-width: 1300px;
+	}
 	html,body{
 		margin : 0;
 		padding : 0;

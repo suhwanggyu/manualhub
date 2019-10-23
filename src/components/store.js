@@ -15,6 +15,7 @@ export const CHANGE_CARAOUSEL='CHANGE_CARAOUSEL'
 export const CHANGE_SELECT='CHANGE_SELECT'
 export const ALL_CLEAR='ALL_CLEAR'
 export const LODE_FILE='LODE_FILE'
+export const CLICK_HIST='CLICK_HIST'
 
 export default new Vuex.Store({
 
@@ -34,7 +35,44 @@ export default new Vuex.Store({
 		elSelectRef:null,
 		editRef:null,
 		listHistorys:[],
-		
+		onHistory:false,
+		textLog:[
+		{
+			date:'2019.10.29',
+			author:'일병 이종법',
+			index:0,
+			comment:'P-999K 신형 사진으로 교체, 교신방법 오타 수정',
+			history_index : 2
+		},
+		{
+			date:'2019.8.8',
+			author:'중사 김민형',
+			index:1,
+			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
+			history_index : 0
+		},
+		{
+			date:'2019.8.8',
+			author:'중사 김민형',
+			index:0,
+			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
+			history_index : 0
+		},
+		{
+			date:'2019.8.8',
+			author:'중사 김민형',
+			index:1,
+			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
+			history_index : 1
+		},
+		{
+			date:'2019.8.8',
+			author:'중사 김민형',
+			index:0,
+			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
+			history_index : 1
+		},
+		],
 		users:[
 			{
 				id : "1",
@@ -68,6 +106,13 @@ export default new Vuex.Store({
 		[CLICK_LIST](state){
 			//리스트를 클릭시 히스토리 인덱스는 다시 고쳐져야한다.
 			state.historyIndex = state.listHistorys[state.selectedDocument].historys.length-1
+			//케라우저도 돌려줘야한다.
+			state.caraRef.setActiveItem(state.historyIndex)
+
+			//수정 필요
+			state.elSelectRef.elSelected=state.listHistorys[state.selectedDocument].historys[state.historyIndex].date +" "+state.listHistorys[state.selectedDocument].historys[state.historyIndex].author
+		},
+		[CLICK_HIST](state){
 			//케라우저도 돌려줘야한다.
 			state.caraRef.setActiveItem(state.historyIndex)
 

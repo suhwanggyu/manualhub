@@ -20,7 +20,7 @@
 			<el-divider direction="vertical"/>
 			<span id="textDate">{{historyDate}}</span>
 			<el-button id="modifyBtn" type="primary" icon="el-icon-edit" @click="onClickModify">수정</el-button>
-			<el-checkbox label="히스토리" border></el-checkbox>
+			<el-checkbox v-model="optionHistory" label="히스토리" border></el-checkbox>
 		</div>
 	</div>
 </template>
@@ -99,8 +99,14 @@ export default{
 			//historyIndex가 변하면 이 둘도 같이 변화됨  
 			return{
 				elSelected:'',
+				optionHistory : false
 			}
 
+	},
+	watch : {
+		optionHistory : function(){
+			this.$store.state.onHistory = this.optionHistory;
+		}
 	},
 	mounted(){
 			let stat =this.$store.state
