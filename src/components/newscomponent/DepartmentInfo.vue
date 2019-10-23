@@ -46,6 +46,8 @@ export default {
     #DepartMentInfo{
         overflow: hidden;
         height : 25%;
+        width : 80%;
+        margin : 0 auto;
     }
 
     #departImg{

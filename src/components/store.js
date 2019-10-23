@@ -190,23 +190,23 @@ export default new Vuex.Store({
 			{
 				id : "kokoja2",	
 				rank:"일병",
-				name:"김종법",
+				name:"김종태",
 				password : "Rhkswptlf1908!",
 				department_id:0,
 			},
 			{
 				id : "kokoja3",
 				rank:"일병",
-				name:"일종법",
+				name:"한성하",
 				password : "Rhkswptlf1908!",
-				department_id:2,
+				department_id:1,
 			},
 			{
 				id : "kokoja4",
 				rank:"일병",
 				name:"일종법",
 				password : "Rhkswptlf1908!",
-				department_id:2,
+				department_id:1,
 			},
 		],
 		department:[
