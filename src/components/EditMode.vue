@@ -16,8 +16,8 @@ export default{
 			if(stat.selected===null){
 				return ' '
 			}
-			let index=stat.listDocuments.findIndex(x=> x.index===stat.selected)
-			return stat.listDatas[index].text
+			let index=stat.listHistorys.findIndex(x=> x.index===stat.selected)
+			return stat.listHistorys[index].title
 		},
 
 	},

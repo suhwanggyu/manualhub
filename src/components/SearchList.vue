@@ -1,9 +1,9 @@
 <template>
 	<div id="SearchList">
-		<el-table :data="listDatas" height="100%" style="width: 100%" @row-click="clickList">
-			<el-table-column :span="18" prop="text" label="title" min-width="260">
+		<el-table :data="listDatas"  style="width: 100%" @row-click="clickList">
+			<el-table-column :span="18" prop="title" label="title" min-width="260">
 			</el-table-column>
-			<el-table-column :span="6" prop="name" label="Name" min-width="100">
+			<el-table-column :span="6" prop="historys[0].author" label="Name" min-width="100">
 			</el-table-column>
 		</el-table>
 		<plus-button></plus-button>
@@ -20,11 +20,10 @@ export default{
 	computed:{
 		listDatas(){
 			
-			return this.$store.state.listDatas.filter(dat=>{
-				return dat.text.toLowerCase().includes(this.$store.state.search.toLowerCase())
+			return this.$store.state.listHistorys.filter(dat=>{
+				return dat.title.toLowerCase().includes(this.$store.state.search.toLowerCase())
 			})
-		},
-		
+		}
 	},
 	data:function(){
 		return {

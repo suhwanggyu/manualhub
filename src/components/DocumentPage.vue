@@ -49,8 +49,8 @@ export default{
 			if(stat.selected===null){
 				return { length : 1}
 			}
-			let index=stat.listDocuments.findIndex(x=> x.index===stat.selected);
-			return stat.listDocuments[index].history
+			let index=stat.listHistorys.findIndex(x=> x.index===stat.selected);
+			return stat.listHistorys[index].historys
 		},
 		historyIndex(){
 			return this.$store.state.historyIndex;

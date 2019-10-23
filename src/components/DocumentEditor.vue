@@ -10,7 +10,7 @@ export default {
   data(){
     let stat= this.$store.state
     return{
-      content:stat.listDocuments[stat.selectedDocument].history[stat.historyIndex].text,
+      content:stat.listHistorys[stat.selectedDocument].historys[stat.historyIndex].text,
     }
 
   },

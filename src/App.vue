@@ -16,6 +16,7 @@ import LoginContent from './components/LoginContent.vue';
 import NewsContent from './components/NewsContent.vue';
 import MainFooter from './components/MainFooter.vue';
 import VueRouter from 'vue-router';
+import { LODE_FILE } from './components/store.js';
 
 var router = new VueRouter({
 	routes:[{
@@ -67,7 +68,12 @@ export default {
 			console.log(this.$store.state.loginstate);
 			return this.$store.state.loginstate;
 		}
+	},
+	created : function(){
+		this.$store.commit(LODE_FILE);
+		console.log(this.$store.state.listHistorys);
 	}
+
 }
 </script>
 
@@ -82,6 +88,7 @@ export default {
 	.el-container{
 		height: 100%;
 	}
+	
 	
 	
 	

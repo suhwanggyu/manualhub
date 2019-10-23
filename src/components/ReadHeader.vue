@@ -3,7 +3,7 @@
 		<div class="line">
 			<span>글제목</span>
 			<el-divider direction="vertical"/> 
-			<span id="textTitle">{{title.text}}</span>
+			<span id="textTitle">{{title.title}}</span>
 			<el-select :value="elSelected" placeholder="히스토리" @input="dispatch" ref="elSelect">
 				<el-option
 						v-for="item in documentData.history"
@@ -14,7 +14,7 @@
 		<div class="line">
 			작성자명 
 			<el-divider direction="vertical"/>
-			<span id="textAuthor">{{title.name}}</span>
+			<span id="textAuthor">{{title.historys[0].author}}</span>
 			<el-divider direction="vertical"/>
 			날짜
 			<el-divider direction="vertical"/>
@@ -36,27 +36,27 @@ export default{
 			if(stat.selected===null){
 				return ' '
 			}
-			let index=stat.listDocuments.findIndex(x=> x.index===stat.selected)
-			return stat.listDatas[index]
+			let index=stat.listHistorys.findIndex(x=> x.index===stat.selected)
+			return stat.listHistorys[index]
 		},
 		documentData(){
 			let stat =this.$store.state
 			if(stat.selected===null){
 				return ' '
 			}
-			let index=stat.listDocuments.findIndex(x=> x.index===stat.selected)
+			let index=stat.listHistorys.findIndex(x=> x.index===stat.selected)
 
-			return stat.listDocuments[index]
+			return stat.listHistorys[index]
 		},
 		historyDate(){
 			let stat =this.$store.state
 			if(stat.selected===null){
 				return ' '
 			}
-			let index=stat.listDocuments.findIndex(x=> x.index===stat.selected)
+			let index=stat.listHistorys.findIndex(x=> x.index===stat.selected)
 
 
-			return stat.listDocuments[index].history[stat.historyIndex].date
+			return stat.listHistorys[index].historys[stat.historyIndex].date
 		},
 
 		
@@ -76,12 +76,12 @@ export default{
 			if(stat.selected==null){
 				return ' '
 			}
-			let index=stat.listDocuments.findIndex(x=> x.index===stat.selected)
+			let index=stat.listHistorys.findIndex(x=> x.index===stat.selected)
 
 			//store의 historyIndex를 업데이트 시켜줌!
 			this.$store.commit(SET_HISTORY,e)
 
-			this.elSelected=stat.listDocuments[index].history[e].date +" "+stat.listDocuments[index].history[e].name
+			this.elSelected=stat.listHistorys[index].historys[e].date +" "+stat.listHistorys[index].historys[e].author
 			
 			//carousel도 옮겨준다!
 			this.$store.commit(CHANGE_CARAOUSEL)
