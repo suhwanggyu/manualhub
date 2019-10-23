@@ -11,8 +11,7 @@
 </template>
 <script>
 import PlusButton from "./PlusButton.vue"
-import {CLICK_LIST} from './store.js'
-	
+import {CLICK_LIST, FIND_INDEX} from './store.js'
 export default{
 	name:"SearchList",
 	components:{
@@ -35,8 +34,15 @@ export default{
 		clickList(receiver_id){
 			
 			let selectedNum = receiver_id.index;
-			this.$store.commit(CLICK_LIST, selectedNum)
-		
+			//selected 업데이트
+			this.$store.state.selected=selectedNum
+
+			//document index 업데이트
+			this.$store.commit(FIND_INDEX)
+
+			//리스트 클릭시 현상들
+			this.$store.commit(CLICK_LIST)
+			
 		}
 	}
 	

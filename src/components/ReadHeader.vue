@@ -4,7 +4,16 @@
 			<span>글제목</span>
 			<el-divider direction="vertical"/> 
 			<span id="textTitle">{{title.text}}</span>
+<<<<<<< HEAD
 			<el-select value="1"></el-select>
+=======
+			<el-select :value="elSelected" placeholder="히스토리" @input="dispatch" ref="elSelect">
+				<el-option
+						v-for="item in documentData.history"
+						:key="item.index"
+						:value="item.index">{{item.date}}</el-option>
+			</el-select>
+>>>>>>> a8c91eb0c01c0005bfe11054f8201cfd36af1669
 		</div>
 		<div class="line">
 			작성자명 
@@ -13,14 +22,14 @@
 			<el-divider direction="vertical"/>
 			날짜
 			<el-divider direction="vertical"/>
-			<span id="textDate">{{title.date}}</span>
+			<span id="textDate">{{historyDate}}</span>
 			<el-button id="modifyBtn" type="primary" icon="el-icon-edit" @click="onClickModify">수정</el-button>
 			<el-checkbox label="히스토리" border></el-checkbox>
 		</div>
 	</div>
 </template>
 <script>
-	import {CLICK_MODE} from './store.js'
+	import {CLICK_MODE,SET_HISTORY,CHANGE_CARAOUSEL} from './store.js'
 	
 	
 export default{
@@ -34,15 +43,81 @@ export default{
 			let index=stat.listDocuments.findIndex(x=> x.index===stat.selected)
 			return stat.listDatas[index]
 		},
+		documentData(){
+			let stat =this.$store.state
+			if(stat.selected===null){
+				return ' '
+			}
+			let index=stat.listDocuments.findIndex(x=> x.index===stat.selected)
+
+			return stat.listDocuments[index]
+		},
+		historyDate(){
+			let stat =this.$store.state
+			if(stat.selected===null){
+				return ' '
+			}
+			let index=stat.listDocuments.findIndex(x=> x.index===stat.selected)
+
+
+			return stat.listDocuments[index].history[stat.historyIndex].date
+		},
+
 		
 	},
 	methods:{
 		onClickModify(){
-			
+			if(this.$store.state.selected !=0 && !this.$store.state.selected){
+				//리스트가 클릭이 안됬는데 수정하려하면 끝내줌
+				alert('리스트를 먼저 선택해주세요.')
+				return
+			}
 			this.$store.commit(CLICK_MODE,true)
-			
 		},
+		dispatch(e){
+			//e는 history의 현재 index가됨!
+			let stat =this.$store.state
+			if(stat.selected==null){
+				return ' '
+			}
+			let index=stat.listDocuments.findIndex(x=> x.index===stat.selected)
+
+			//store의 historyIndex를 업데이트 시켜줌!
+			this.$store.commit(SET_HISTORY,e)
+
+			this.elSelected=stat.listDocuments[index].history[e].date +" "+stat.listDocuments[index].history[e].name
+			
+			//carousel도 옮겨준다!
+			this.$store.commit(CHANGE_CARAOUSEL)
+
+		}
+
+	},
+	data(){
+			//elSelected 는 select 박스에서 표시되는것
+			//selectedDate는 작성날짜에 표시되는것
+			//store.js의 historyIndex 라는 변수를 통해서 연동됨   
+			//historyIndex가 변하면 이 둘도 같이 변화됨  
+			return{
+				elSelected:'',
+			}
+
+	},
+	mounted(){
+			let stat =this.$store.state
+			stat.elSelectRef=this
+			if(stat.selected==null){
+				console.log("null 상태")
+				this.elSelected="리스트를 먼저 선택해주세요."
+			}else{
+				console.log("dd")
+			}
+			
+	},
+	beforeDestroy(){
+		console.log("all clear 리드페이지")
 	}
+
 	
 	
 	
