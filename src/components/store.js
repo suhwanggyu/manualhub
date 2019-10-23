@@ -143,7 +143,7 @@ export default new Vuex.Store({
 					author:'중사 김무협'
 				})
 				Vue.set(state.listHistorys[state.selectedDocument],'historys',temp)
-
+				state.historyIndex = state.listHistorys[state.selectedDocument].historys.length-1;
 				
 				//console.log("추가하기 후 : ", state.listDocuments[state.selectedDocument].history.length)
 
