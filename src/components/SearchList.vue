@@ -51,7 +51,7 @@ export default{
 	
 }	
 </script>
-<style>
+<style scoped>
 	.PlusButton{
 		float:right;
 		width:40px;
