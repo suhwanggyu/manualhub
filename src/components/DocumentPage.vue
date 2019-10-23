@@ -4,9 +4,9 @@
 		<template v-if="editing===false">
 			<!-- 수정버튼을 누르기전!-->
 			<read-header/>
-			<el-carousel arrow="always" :autoplay=false :initial-index="historyList.length-1">
-				<el-carousel-item v-for="item in historyList" :key="item.index">
-					<h3>{{ item.text }}</h3>
+			<el-carousel arrow="always" :autoplay=false :initial-index="historyIndex" @change="navi" ref="cara">
+				<el-carousel-item  v-for="item in historyList" :key="item.index">
+					<p v-html="item.text">{{ item.text }}</p>
 				</el-carousel-item>
 			</el-carousel>
 
@@ -16,10 +16,7 @@
 			<!-- 수정버튼을 누른 후!-->
 		<form>
 			<edit-mode/>
-			<fieldset>
-				<textarea v-model="changingDocument">
-				</textarea>
-			</fieldset>
+			<document-editor/>
 			
 		</form>
 			
@@ -32,12 +29,14 @@
 <script>
 	import ReadHeader from './ReadHeader.vue'
 	import EditMode from './EditMode.vue'
-	
+	import DocumentEditor from './DocumentEditor.vue'
+	import {SET_HISTORY,CHANGE_SELECT,ALL_CLEAR} from './store.js'
 export default{
 	name:"DocumentPage",
 	components:{
 			'read-header':ReadHeader,
 			'edit-mode':EditMode,
+			'document-editor':DocumentEditor,
 		}
 		,
 	computed:{
@@ -48,25 +47,49 @@ export default{
 		historyList(){
 			let stat =this.$store.state;
 			if(stat.selected===null){
-				return '리스트를 클릭해주세요.'
+				return null
 			}
 			let index=stat.listDocuments.findIndex(x=> x.index===stat.selected);
-			console.log(stat.listDocuments[index].history.length)
 			return stat.listDocuments[index].history
+		},
+		historyIndex(){
+			return this.$store.state.historyIndex;
 		}
 		
 	},
 	data(){
 		return{
 			changingDocument:null,
-			length : 0
+			
 		}
 		
 		
 		
+	},
+	methods:{
+		navi(newIndex){
+				//history index를 전달해준다!
+				this.$store.commit(SET_HISTORY,newIndex)
+
+				//select 박스도 변경해줌!
+				
+				this.$store.commit(CHANGE_SELECT)
+				
+		},
+	},
+	mounted(){
+
+		this.$store.state.caraRef=this.$refs.cara
+
 	}
-	
-	
+	,
+	beforeDestroy(){
+		//다시 히스토리 인덱스는 0으로 돌려놓고 삭제됨.
+		this.$store.commit(SET_HISTORY,0)
+
+		this.$store.commit(ALL_CLEAR)
+	}
+
 }	
 </script>
 <style>
