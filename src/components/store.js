@@ -167,7 +167,7 @@ export default new Vuex.Store({
 		},
 		[CLICK_LIST](state){
 			//리스트를 클릭시 히스토리 인덱스는 다시 고쳐져야한다.
-			state.historyIndex = 0
+			state.historyIndex = state.listDocuments[state.selectedDocument].history.length-1
 			//케라우저도 돌려줘야한다.
 			state.caraRef.setActiveItem(state.historyIndex)
 
@@ -187,7 +187,19 @@ export default new Vuex.Store({
 				//2. 글 수정하기
 				//글이 히스토리가 새로 추가된다!     날짜와 사람이름이 변경되어야함!
 				//히스토리 0번 인덱스에 추가되야한다!
-				state.listDocuments[state.selectedDocument].text=state.editorRef.value
+
+				console.log("추가하기 전 : ", state.listDocuments[state.selectedDocument].history.length)
+				state.listDocuments[state.selectedDocument].history.unshift(
+				{
+					index:state.listDocuments[state.selectedDocument].history.length,
+					text:state.editRef.value,
+					date:'2019/10/23',
+					name:'중사 김무협'
+				}
+
+					
+					)
+					console.log("추가하기 후 : ", state.listDocuments[state.selectedDocument].history.length)
 
 
 		},
