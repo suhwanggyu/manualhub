@@ -7,6 +7,7 @@ export const CLICK_SEARCH ='CLICK_SEARCH'
 export const CLICK_LIST = 'CLICK_LIST'
 export const CLICK_MODE = 'CLICK_MODE'
 export const FIND_CLICKED_INDEX='FIND_CLICKED_INDEX'
+export const SUCCESS_LOGIN = 'SUCCESS_LOGIN'
 export default new Vuex.Store({
 	state:{
 		//vue의 data와 같은것   computed 에서 불러서 사용하면됨
@@ -70,7 +71,7 @@ export default new Vuex.Store({
 		selected:null,
 		documentMode:false,
 		
-		
+		loginstate:false,
 		
 		
 		
@@ -119,6 +120,26 @@ export default new Vuex.Store({
 			text:"P-999K 사용절차와 수리방법"
 			
 		},	
+		],
+
+
+		users:[
+			{
+				id : "kokoja",
+				password : "Rhkswptlf1908!"
+			},
+			{
+				id : "kokoja2",
+				password : "Rhkswptlf1908!"
+			},
+			{
+				id : "kokoja3",
+				password : "Rhkswptlf1908!"
+			},
+			{
+				id : "kokoja4",
+				password : "Rhkswptlf1908!"
+			}
 		]
 		
 		
@@ -143,14 +164,10 @@ export default new Vuex.Store({
 			}
 			let index=state.listDocuments.findIndex(x=> x.index===state.selected)
 			return index
+		},
+
+		[SUCCESS_LOGIN](state){
+			state.loginstate = true;
 		}
-		
 	}
-	
-	
-	
-	
-	
-	
-	
 });

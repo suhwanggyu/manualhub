@@ -4,7 +4,7 @@
 			<span>글제목</span>
 			<el-divider direction="vertical"/> 
 			<span id="textTitle">{{title.text}}</span>
-			<el-select></el-select>
+			<el-select value="1"></el-select>
 		</div>
 		<div class="line">
 			작성자명 

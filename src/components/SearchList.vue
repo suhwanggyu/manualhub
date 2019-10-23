@@ -32,7 +32,7 @@ export default{
 		}
 	},
 	methods:{
-	clickList(receiver_id){
+		clickList(receiver_id){
 			
 			let selectedNum = receiver_id.index;
 			this.$store.commit(CLICK_LIST, selectedNum)
