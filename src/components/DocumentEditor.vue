@@ -1,5 +1,5 @@
 <template>
-  <vue-editor v-model="content" ref="editorRef" />
+  <vue-editor id="editor" v-model="content" ref="editorRef"/>
 </template>
 
 <script>
@@ -20,3 +20,12 @@ export default {
   }
 };
 </script>
+
+<style>
+  #editor{
+    height : 100%;
+  }
+  .quillWrapper{
+    height: 100%;
+  }
+</style>

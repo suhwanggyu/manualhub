@@ -1,17 +1,17 @@
 <template>
 	<el-main id="MainContent">
 		<el-row>
-			<el-col :span="7" min-width="500px"><search-page class="grid-content"></search-page></el-col>
+			<el-col :span="7" min-width="500px" v-if="!$store.state.onHistory"><search-page class="grid-content"></search-page></el-col>
+			<el-col :span="7" min-width="500px" v-if="$store.state.onHistory"><history-page></history-page></el-col>
 			<el-col :span="17"><document-page class="grid-content"></document-page></el-col>
 		</el-row>
 	</el-main>
-
-
 </template>
 
 <script>
 import SearchPage from './SearchPage.vue'
 import DocumentPage from './DocumentPage.vue'
+import HistoryPage from './HistoryPage.vue'
 	
 	
 
@@ -22,6 +22,8 @@ export default {
   components: {
 		'search-page':SearchPage,
 		'document-page':DocumentPage,
+		'history-page':HistoryPage
+
   }
 }
 </script>
