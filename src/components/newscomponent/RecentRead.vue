@@ -2,8 +2,8 @@
     <div id="RecentlyRead">
         <el-table id="RecentTable" :data="readLog" border :default-sort = "{prop: 'date', order: 'ascending'}" @row-click="clickLog" style="width: 100%">
             <el-table-column id="label" label="최근 열람 기록">
-            <el-table-column :span="12" prop="title" label="title" min-width="260"></el-table-column>
-            <el-table-column :span="6" prop="author" label="등록자" min-width="100"></el-table-column>
+            <el-table-column :span="12" prop="title" label="제목" min-width="260"></el-table-column>
+            <el-table-column :span="6" prop="author" label="열람자" min-width="100"></el-table-column>
             <el-table-column :span="6" prop="date" label="날짜" min-width="100"></el-table-column>
             </el-table-column>
         </el-table>
