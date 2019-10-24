@@ -57,11 +57,15 @@ WEB IDE를 통한 빠른 처리 등
 <p align="center">
   <img src="https://github.com/bub3690/manualhub/blob/master/readmeIMG/%EC%96%91%EC%8B%9D%ED%8C%8C%EC%9D%BC%EC%B2%A0.png"/> 
 </p>
+
+
 >과거부터 작성된 업무일지가 쉽게 추적이 가능
 
 
->양식에 해당하는 모든 문서를 조회하는 동영상
+
+
 ![](https://github.com/bub3690/manualhub/blob/master/readmeIMG/%EC%9D%BC%EC%A7%80%EA%B4%80%EB%A6%AC.gif)
+>양식에 해당하는 모든 문서를 조회하는 동영상  
 
 양식을 편하게 조회, 신청 할 수 있고,
 매일 올리는 일지 히스토리 관리에 용이!  
