@@ -51,7 +51,7 @@ WEB IDE를 통한 빠른 처리 등
 
 ### 2. 실무 메뉴얼 통합과 수정 변경사항 추적
 
-> GIF을 놓을 자리
+![](https://github.com/bub3690/manualhub/blob/master/readmeIMG/%ED%86%B5%ED%95%A9%EC%9D%B8%EC%88%98%EC%9D%B8%EA%B3%84.gif)
 
 
 ***실무 메뉴얼 통합***을 통해 ***빠른 업무 학습***과
@@ -60,7 +60,7 @@ WEB IDE를 통한 빠른 처리 등
 
 ### 3. 히스토리 추적을 통한, 편한 일지관리와 빠른 보고체계
 
->GIF 놓을 자리
+![](https://github.com/bub3690/manualhub/blob/master/readmeIMG/%EC%9D%BC%EC%A7%80%EA%B4%80%EB%A6%AC.gif)
 
 양식을 편하게 조회, 신청 할 수 있고,
 매일 올리는 일지 히스토리 관리에 용이!
