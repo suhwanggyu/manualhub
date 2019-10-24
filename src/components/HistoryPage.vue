@@ -3,7 +3,7 @@
         <el-table :data="listLogs"  style="width: 100%" @row-click="clickList">
 			<el-table-column :span="18" prop="comment" label="title" min-width="260">
 			</el-table-column>
-			<el-table-column :span="6" prop="date" label="Name" min-width="100">
+			<el-table-column :span="6" prop="date" label="Date" min-width="100">
 			</el-table-column>
 		</el-table>
 	</el-main>
@@ -28,7 +28,7 @@ export default {
 			let selectedNum = receiver_id.history_index;
 
 			//document index 업데이트
-			this.$store.commit(SET_HISTORY,selectedNum )
+			this.$store.commit(SET_HISTORY, selectedNum )
 
 			//리스트 클릭시 현상들
 			this.$store.commit(CLICK_HIST)
