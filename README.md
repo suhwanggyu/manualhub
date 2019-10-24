@@ -1,39 +1,42 @@
-# Manual Hub
+
+<h1 align="center"> Manual Hub</h1>
 ## '2019년 군장병 공개SW 집체교육'(2019.10.21~2019.10.25)
-<div style="margin: 0 auto">![LOGO](./readmeIMG/logo.png)</div>
- 
+<p align="center">
+  <img src="./readmeIMG/logo.png" alt="LOGO"/>
+</p>
 ### 개발 명세서 
 >여기 파일 다운로드 넣을 
 
 
 ### 1. 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
->아직 안됬음
+```
+1. 최신버전 Chrome
+2. Node.js, NPM
+3. Vue.js
+4. javascript 지원 컴파일러
+```
 
 ### 2. 설치안내 ( Project Setup )
 
-#### clone remote space
+
 ```
-git clone 저장소
-```
-#### change directory to space
-```
-cd {clone장소}
-```
-#### install node_modules
-```
-npm install
+1. 현재 리모트 저장소를 clone 해준다.
+ git clone 저장소
+2. directory를 clone 해준 위치로 이동한다.
+ cd [clone장소]
+3. 해당 디렉토리에서 node_modules를 설치해준다
+ npm install
 ```
 
+
 ### 3. 사용법 ( Getting Started )
- #### Change Directory to remote Place
   ```
-  cd {clone space}
+  1. directory를 clone 해준 위치로 이동한다.
+   cd [clone space]
+  2. 컴파일 해주고 로컬 호스트 서버를 켜준다.
+   npm run serve
+  3. 로컬 호스트 주소로 접속한다!
   ```
- #### run compiles and local host server
-  ```
-  npm run serve
-  ```
- #### connect to localhost page!
 
 
 ### 4. 파일 정보 및 목록 ( File Manifest )
@@ -82,8 +85,5 @@ npm install
 > 주요 커밋 로그
 |커밋 명|설명|일시|
 |------|---|---|
-||||
-||||
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+|ㅇ|ㅇ|ㅇ|
+|ㅇ|ㅇ|ㅇ|
