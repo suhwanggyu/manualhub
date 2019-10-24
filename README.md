@@ -1,6 +1,10 @@
 
 <h1 align="center"> Manual Hub</h1>
+
+
 ## '2019년 군장병 공개SW 집체교육'(2019.10.21~2019.10.25)
+
+
 <p align="center">
   <img src="./readmeIMG/logo.png" alt="LOGO"/>
 </p>
@@ -21,10 +25,13 @@
 
 ```
 1. 현재 리모트 저장소를 clone 해준다.
+
  git clone 저장소
 2. directory를 clone 해준 위치로 이동한다.
+
  cd [clone장소]
 3. 해당 디렉토리에서 node_modules를 설치해준다
+
  npm install
 ```
 
@@ -32,10 +39,13 @@
 ### 3. 사용법 ( Getting Started )
   ```
   1. directory를 clone 해준 위치로 이동한다.
+  
    cd [clone space]
   2. 컴파일 해주고 로컬 호스트 서버를 켜준다.
+  
    npm run serve
   3. 로컬 호스트 주소로 접속한다!
+  
   ```
 
 
@@ -73,6 +83,8 @@
 
 ### 6. 배포자 및 개발자의 연락처 정보 (Contact Information)
 > 서왕규 : wang1@hanyang.ac.kr
+
+
 > 이종법 : bub3690@naver.com
 
 ### 7. 알려진 버그 (Known Issues)
@@ -80,10 +92,21 @@
 ### 8. 문제 발생에 대한 해결책 (Troubleshooting)
 > 대회 종료 후, vue2-editor 보다 호환성이 뛰어난 editor를 사용해야함.
 ### 9. credit
-> 크레딧이 뭐지
+```
+  "dependencies": {
+    "axios": "^0.19.0",
+    "core-js": "^3.1.2",
+    "credits": "^2.1.0",
+    "element-ui": "^2.12.0",
+    "vue": "^2.6.10",
+    "vue-axios": "^2.1.5",
+    "vue-router": "^3.1.3",
+    "vue2-editor": "^2.10.2",
+    "vuex": "^3.1.1"
+  }
+```
 ### 10. 업데이트 정보 (Change Log)
-> 주요 커밋 로그
-|커밋 명|설명|일시|
-|------|---|---|
-|ㅇ|ㅇ|ㅇ|
-|ㅇ|ㅇ|ㅇ|
+주요 커밋 로그
+  <img src="./readmeIMG/mainPullRequest.png" alt="log"/>
+
+
