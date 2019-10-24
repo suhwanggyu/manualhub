@@ -22,20 +22,83 @@ WEB IDE를 통한 빠른 처리 등
 
 ### 관등성명
 ```
-  공군 작전정보통신단 체계운영대대 기반체계운영중대 체계통제반 ***병장 서왕규***
+  공군 작전정보통신단 체계운영대대 기반체계운영중대 체계통제반 병장 서왕규
 
   육군 5군단 5공병여단 정보통신과 체계반 일병 이종법
 ```
 
-### 개발 명세서 
->여기 파일 다운로드 넣을 
+### 개발 명세서  
+#
+**파일 열람에 로딩이 길 수 있습니다.**  
+[기능 발표PPT](https://github.com/bub3690/manualhub/blob/master/readmeIMG/Web_ManualHub_Team.pptx)
 
+
+[화면정의서](https://github.com/bub3690/manualhub/blob/master/readmeIMG/Web_ManualHub_Team_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EC%84%A4%EA%B3%84%EC%84%9C%5B%ED%99%94%EB%A9%B4%EC%A0%95%EC%9D%98%EC%84%9C%5D.pdf)
+
+
+[요구사항 명세서](https://github.com/bub3690/manualhub/blob/master/readmeIMG/Web_ManualHub_Team_%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%EB%AA%85%EC%84%B8%EC%84%9C.pdf)
+
+
+***
+### 웹페이지 기능
+
+***
+
+### 1. 양식 통합으로 빠른 업무 처리 기능
+
+![](https://github.com/bub3690/manualhub/blob/master/readmeIMG/1%EB%B2%88%20%ED%95%B5%EC%8B%AC%EA%B8%B0%EB%8A%A5.png)
+> 통합 양식을 빠르게 찾아서 작성하는 사진과 동영상
+![](https://github.com/bub3690/manualhub/blob/master/readmeIMG/%EB%B9%A0%EB%A5%B8%EC%97%85%EB%AC%B4.gif)
+
+**단 15초!**
+로그인 부터 신청서 작성 , 신청서 작성부터 자동제출 까지
+**빠른 업무처리 가능!**  
+#
+
+
+### 2. 히스토리 추적을 통한, 편한 일지관리와 빠른 보고체계
+<p align="center">
+  <img src="https://github.com/bub3690/manualhub/blob/master/readmeIMG/%EC%96%91%EC%8B%9D%ED%8C%8C%EC%9D%BC%EC%B2%A0.png"/> 
+</p>
+
+
+>과거부터 작성된 업무일지가 쉽게 추적이 가능
+
+
+
+
+![](https://github.com/bub3690/manualhub/blob/master/readmeIMG/%EC%9D%BC%EC%A7%80%EA%B4%80%EB%A6%AC.gif)
+>양식에 해당하는 모든 문서를 조회하는 동영상  
+
+양식을 편하게 조회, 신청 할 수 있고,
+매일 올리는 일지 히스토리 관리에 용이!  
+#
+
+
+### 3. 실무 메뉴얼 통합과 수정 변경사항 추적
+
+![](https://github.com/bub3690/manualhub/blob/master/readmeIMG/%ED%86%B5%ED%95%A9%EC%9D%B8%EC%88%98%EC%9D%B8%EA%B3%84.gif)
+
+
+**실무 메뉴얼 통합**을 통해 **빠른 업무 학습**과
+수정 히스토리 조회를 통한 **정확한 업무 상황 파악가능!**  
+#
+
+
+
+
+
+
+
+
+
+***
 
 ### 1. 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 ```
-1. 최신버전 Chrome
-2. Node.js, NPM
-3. Vue.js
+1. 최신버전 Chrome ( ver.77.0.3865 )
+2. Node.js, NPM ( v10.16.3 , 6.9.0)
+3. Vue.js ( v10.16.3 )
 4. javascript 지원 컴파일러
 ```
 
@@ -69,6 +132,9 @@ WEB IDE를 통한 빠른 처리 등
    npm run serve
    
   3. 로컬 호스트 주소로 접속한다!
+  
+  4. Router Guard의 구현으로 인해, 로그인을 해야 다른페이지로 넘어갈 수 있고,
+  프로토타입은 아이디는 1, 비번 1 계정을 만들어 놓았다.(다른 계정의 접속은 )
   
   ```
 
