@@ -28,6 +28,7 @@ WEB IDE를 통한 빠른 처리 등
 ```
 
 ### 개발 명세서 
+**파일 열람에 로딩이 길 수 있습니다.**
 [화면정의서](https://github.com/bub3690/manualhub/blob/master/readmeIMG/Web_ManualHub_Team_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EC%84%A4%EA%B3%84%EC%84%9C%5B%ED%99%94%EB%A9%B4%EC%A0%95%EC%9D%98%EC%84%9C%5D.pdf)
 
 
@@ -43,9 +44,9 @@ WEB IDE를 통한 빠른 처리 등
 
 ![](https://github.com/bub3690/manualhub/blob/master/readmeIMG/%EB%B9%A0%EB%A5%B8%EC%97%85%EB%AC%B4.gif)
 
-***단 15초!***
+**단 15초!**
 로그인 부터 신청서 작성 , 신청서 작성부터 자동제출 까지
-***빠른 업무처리 가능!***  
+**빠른 업무처리 가능!**  
 #
 
 
@@ -57,8 +58,8 @@ WEB IDE를 통한 빠른 처리 등
 ![](https://github.com/bub3690/manualhub/blob/master/readmeIMG/%ED%86%B5%ED%95%A9%EC%9D%B8%EC%88%98%EC%9D%B8%EA%B3%84.gif)
 
 
-***실무 메뉴얼 통합***을 통해 ***빠른 업무 학습***과
-수정 히스토리 조회를 통한 ***정확한 업무 상황 파악가능!***  
+**실무 메뉴얼 통합**을 통해 **빠른 업무 학습**과
+수정 히스토리 조회를 통한 **정확한 업무 상황 파악가능!**  
 #
 
 
