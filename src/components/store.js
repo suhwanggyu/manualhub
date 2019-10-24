@@ -43,20 +43,22 @@ export default new Vuex.Store({
 		editMode : false,
 		
 		onHistory:false,
-		readLog:[
-		{
-			date:'2019.10.01',
-			author:'소위 한서준',
-			index:1,
-			title:"여단화상회의 PC 접속방법과 군단회의 접속",
-		},
-		{
-			date:'2019.10.01',
-			author:'중위 위대한',
-			index:0,
-			title:"P-999K 사용절차와 수리방법",
-		},
-		],
+
+		//readLog: 기록
+			readLog:[
+			{
+				date:'2019.10.01',
+				author:'소위 한서준',
+				index:1,
+				title:"여단화상회의 PC 접속방법과 군단회의 접속",
+			},
+			{
+				date:'2019.10.01',
+				author:'중위 위대한',
+				index:0,
+				title:"P-999K 사용절차와 수리방법",
+			},
+			],
 		textLog:[
 		{
 			date:'2014.10.05',
