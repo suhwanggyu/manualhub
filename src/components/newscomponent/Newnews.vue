@@ -7,10 +7,14 @@
             <el-table-column :span="6" prop="date" label="날짜" min-width="100"></el-table-column>
             </el-table-column>
         </el-table>
+        <router-link to="/read">aa</router-link>
     </div>
 </template>
 
 <script>
+
+import {FIND_INDEX, CLICK_LIST, CLICK_HIST, WRITE_READLOG} from '../store.js'
+
 export default {
     computed:{
         textLog(){
@@ -21,7 +25,17 @@ export default {
     },
     methods:{
         clickLog(receiver_id){
-                console.log(receiver_id)
+                this.$store.state.selected = receiver_id.index;
+                this.$store.state.historyIndex = receiver_id.history_index
+                //히스트 설정
+                this.$store.commit(FIND_INDEX)
+                this.$store.commit(CLICK_LIST)
+                this.$store.commit(CLICK_HIST)
+                
+
+                this.$router.push("/read");
+                this.$store.commit(WRITE_READLOG);
+        
         }
 
     }

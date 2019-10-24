@@ -3,6 +3,7 @@
 		<span>글 제목 : </span>
 		<el-input id="titleInput" v-model="titleIn"></el-input>
 		<el-button id="submitButton" type="primary" @click="onClickModify">수정하기</el-button>
+		
 	</div>
 </template>
 <script>
@@ -24,7 +25,6 @@ export default{
 			let index=stat.listHistorys.findIndex(x=> x.index===stat.selected)
 			return stat.listHistorys[index].title
 		},
-
 	},
 	methods:{
 		onClickModify(){
@@ -35,6 +35,31 @@ export default{
 				return
 			}
 
+			//comment 저장하기
+			this.$prompt('Please input your comment', 'Tip', {
+				confirmButtonText: 'OK',
+				cancelButtonText: 'Cancel',
+			}).then(({ value }) => {
+				this.$store.state.textLog.push({
+					date: new Date().toLocaleDateString(),
+					author: this.$store.state.users[this.$store.state.loginIndex].name,
+					index: this.$store.state.selectedDocument,
+					comment: value,
+					history_index : this.$store.state.historyIndex + 1
+				});
+				this.$message({
+				type: 'success',
+				message: 'Your comment is:' + value
+			});
+			}).catch(() => {
+				this.$message({
+				type: 'info',
+				message: 'Input canceled'
+			});       
+			});
+
+
+			//comment 불러오기
 			this.$store.commit(CLICK_MODE,false)
 			this.$store.commit(CLICK_MODIFY,this.titleIn);
 

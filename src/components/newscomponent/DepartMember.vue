@@ -2,8 +2,9 @@
     <div id="DepartMember">
         <el-table id="memberTable" :data="sameDepart" style="width: 100%">
             <el-table-column label="부서원 목록">
-            <el-table-column :span="12" prop="name" label="title" min-width="260"></el-table-column>
-            <el-table-column :span="12" prop="rank" label="등록자" min-width="100"></el-table-column>
+            <el-table-column :span="5" prop="rank" label="계급" min-width="100"></el-table-column>
+            <el-table-column :span="5" prop="name" label="이름" min-width="140"></el-table-column>
+            <el-table-column :span="14" prop="description" label="보직" min-width="300"></el-table-column>
             
             </el-table-column>
         </el-table>

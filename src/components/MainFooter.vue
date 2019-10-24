@@ -1,6 +1,6 @@
 <template>
 	<el-footer id="MainFooter">
-		footer - digital right
+		Military DevCamp 2019.10.24 - Made by 서왕규, 이종법
 	</el-footer>
 
 
@@ -25,5 +25,6 @@ export default {
     color: #333;
     text-align: center;
     line-height: 60px;
+    font-size : 15px;
   }
 </style>
