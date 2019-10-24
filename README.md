@@ -1,6 +1,6 @@
 # Manual Hub
 ## '2019년 군장병 공개SW 집체교육'(2019.10.21~2019.10.25)
-![LOGO](./readmeIMG/logo.png)
+<div style="margin: 0 auto">![LOGO](./readmeIMG/logo.png)</div>
  
 ### 개발 명세서 
 >여기 파일 다운로드 넣을 
