@@ -40,7 +40,6 @@ export default new Vuex.Store({
 
 		
 		onHistory:false,
-		//readLog: 기록
 			readLog:[
 			{
 				date:'2019.10.01',
