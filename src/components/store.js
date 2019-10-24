@@ -59,34 +59,34 @@ export default new Vuex.Store({
 		],
 		textLog:[
 		{
-			date:'2019.10.29',
+			date:'2014.10.05',
 			author:'일병 이종법',
-			index:1,
-			comment:'P-999K 신형 사진으로 교체, 교신방법 오타 수정',
-			history_index : 2
+			index:3,
+			comment:'PRC-999K 글 탑재',
+			history_index : 0
 		},		{
 			date:'2019.10.29',
 			author:'일병 이종법',
-			index:1,
-			comment:'P-999K 신형 사진으로 교체, 교신방법 오타 수정',
+			index:3,
+			comment:'PRC-999K 사진 교체',
 			history_index : 1
 		},
 		{
-			date:'2019.8.8',
-			author:'중사 김민형',
+			date:'2009.08.08',
+			author:'전산 실장',
 			index:2,
-			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
+			comment:'여단 서버도입 및 점검 인수인계서 등록.',
 			history_index : 0
 		},
 		{
-			date:'2019.8.8',
+			date:'2019.08.08',
 			author:'중사 김민형',
 			index:2,
 			comment:'여단 서버 P-50에서 P6-520으로 교체, 교체로 인한 점검방법 1차수정',
 			history_index : 1
 		},
 		{
-			date:'2019.8.8',
+			date:'2019.08.08',
 			author:'중사 김민형',
 			index:0,
 			comment:'입사지원서 양식입니다. 올려주세요',
@@ -119,6 +119,99 @@ export default new Vuex.Store({
 			index:0,
 			comment:'김지훈 입사지원서 제출 했습니다.',
 			history_index : 4
+		},
+		{
+			date:'2018.10.26',
+			author:'전산 실장',
+			index:1,
+			comment:'전산용품 지원 신청서 양식 등록.',
+			history_index : 0
+		},{
+			date:'2019.10.26',
+			author:'일병 이종법',
+			index:1,
+			comment:'10/26 전산용품 지원 신청하겠습니다.',
+			history_index : 1
+		},
+		
+
+
+		{
+			date:'2019.08.01',
+			author:'행정보급관',
+			index:4,
+			comment:'주간 업무 일지 양식 / 매주 올리는곳.',
+			history_index : 0
+		},
+		{
+			date:'2019.08.02',
+			author:'일병 이종법',
+			index:4,
+			comment:'8월 1주차 주간 업무일지',
+			history_index : 1
+		},
+		{
+			date:'2019.08.08',
+			author:'일병 이종법',
+			index:4,
+			comment:'8월 2주차 주간 업무일지',
+			history_index : 2
+		},
+		{
+			date:'2019.08.15',
+			author:'일병 이종법',
+			index:4,
+			comment:'8월 3주차 주간 업무일지',
+			history_index : 3
+		},
+		{
+			date:'2019.08.24',
+			author:'일병 이종법',
+			index:4,
+			comment:'8월 4주차 주간 업무일지',
+			history_index : 4
+		},
+		{
+			date:'2019.09.01',
+			author:'일병 이종법',
+			index:4,
+			comment:'9월 1주차 주간 업무일지',
+			history_index : 5
+		},
+		{
+			date:'2019.09.08',
+			author:'일병 이종법',
+			index:4,
+			comment:'9월 2주차 주간 업무일지',
+			history_index : 6
+		},
+		{
+			date:'2019.09.15',
+			author:'일병 이종법',
+			index:4,
+			comment:'9월 3주차 주간 업무일지',
+			history_index : 7
+		},
+		{
+			date:'2019.09.24',
+			author:'일병 이종법',
+			index:4,
+			comment:'9월 4주차 주간 업무일지',
+			history_index : 8
+		},
+		{
+			date:'2019.10.01',
+			author:'일병 이종법',
+			index:4,
+			comment:'10월 1주차 주간 업무일지',
+			history_index : 9
+		},
+		{
+			date:'2019.10.08',
+			author:'일병 이종법',
+			index:4,
+			comment:'10월 2주차 주간 업무일지',
+			history_index : 10
 		},
 		],
 		users:[
