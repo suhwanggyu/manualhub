@@ -55,11 +55,12 @@ WEB IDE를 통한 빠른 처리 등
 
 ### 2. 히스토리 추적을 통한, 편한 일지관리와 빠른 보고체계
 ![](https://github.com/bub3690/manualhub/blob/master/readmeIMG/%ED%9E%88%EC%8A%A4%ED%86%A0%EB%A6%AC%ED%81%B4%EB%A6%AD.png)
+
+![](https://github.com/bub3690/manualhub/blob/master/readmeIMG/%EC%96%91%EC%8B%9D%ED%8C%8C%EC%9D%BC%EC%B2%A0.png)
 >과거부터 작성된 업무일지가 쉽게 추적이 가능
 
 
-![](https://github.com/bub3690/manualhub/blob/master/readmeIMG/%EC%96%91%EC%8B%9D%ED%8C%8C%EC%9D%BC%EC%B2%A0.png)
->양식에 해당하는 모든 문서를 조회하는 동영상과 사진
+>양식에 해당하는 모든 문서를 조회하는 동영상
 ![](https://github.com/bub3690/manualhub/blob/master/readmeIMG/%EC%9D%BC%EC%A7%80%EA%B4%80%EB%A6%AC.gif)
 
 양식을 편하게 조회, 신청 할 수 있고,
