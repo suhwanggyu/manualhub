@@ -10,7 +10,8 @@
 		<template v-else-if="editing===true">
 			<!-- 수정버튼을 누른 후!-->
 		<form>
-			<edit-mode/>
+			<write-mode v-if="editMode"/>
+			<edit-mode v-else-if="!editMode"/>
 			<document-editor/>
 		</form>
 			
@@ -26,6 +27,8 @@
 	import DocumentEditor from './DocumentEditor.vue'
 	import CarouselPage from './CarouselPage.vue'
 	import {SET_HISTORY,ALL_CLEAR} from './store.js'
+	import WriteMode from './WriteMode.vue'
+
 export default{
 	name:"DocumentPage",
 	components:{
@@ -33,6 +36,7 @@ export default{
 			'read-header':ReadHeader,
 			'edit-mode':EditMode,
 			'document-editor':DocumentEditor,
+			'write-mode' : WriteMode
 		}
 		,
 	computed:{
@@ -40,6 +44,9 @@ export default{
 		editing(){
 			return this.$store.state.documentMode;
 		},
+		editMode(){
+			return this.$store.state.editMode;
+		}
 	},
 	data(){
 		return{

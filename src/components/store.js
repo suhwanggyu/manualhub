@@ -19,6 +19,8 @@ export const LODE_FILE='LODE_FILE'
 export const LOGIN_UPDATE='LOGIN_UPDATE'
 
 export const CLICK_HIST='CLICK_HIST'
+export const WRITE_READLOG = 'WRITE_READLOG'
+export const WRITE_FILE = "WRITE_FILE"
 
 export default new Vuex.Store({
 
@@ -36,8 +38,9 @@ export default new Vuex.Store({
 		caraRef:null,
 		elSelectRef:null,
 		editRef:null,
+		editRef2:null,
 		listHistorys:[],
-
+		editMode : false,
 		
 		onHistory:false,
 			readLog:[
@@ -214,32 +217,76 @@ export default new Vuex.Store({
 		users:[
 			{
 				id : "1",
-				rank:"일병",
-				name:"이종법",
+				rank:"소령",
+				name:"최석한",
 				password : "1",
 				department_id:1,
+				description : "1여단 정보통신대대장"
 			},
 			{
 				id : "kokoja2",	
-				rank:"일병",
+				rank:"중위",
 				name:"김종태",
 				password : "Rhkswptlf1908!",
 				department_id:0,
+				description : "1여단 정보통신대대 정보통신반장"
 			},
 			{
 				id : "kokoja3",
-				rank:"일병",
+				rank:"소위",
 				name:"한성하",
 				password : "Rhkswptlf1908!",
 				department_id:1,
+				description : "1여단 정보통신대대 정보통신반 체계담당"
+			},
+			{
+				id : "kokoja4",
+				rank:"원사",
+				name:"김태익",
+				password : "Rhkswptlf1908!",
+				department_id:1,
+				description : "1여단 정보통신대대 정보통신반 전산담당"
+			},
+			{
+				id : "kokoja4",
+				rank:"상사",
+				name:"김태석",
+				password : "Rhkswptlf1908!",
+				department_id:1,
+				description : "1여단 정보통신대대 정보통신반 장비담당"
+			},
+			{
+				id : "kokoja4",
+				rank:"병장",
+				name:"이상수",
+				password : "Rhkswptlf1908!",
+				department_id:1,
+				description : "1여단 정보통신대대 정보통신병"
+			},
+			{
+				id : "kokoja4",
+				rank:"상병",
+				name:"이보현",
+				password : "Rhkswptlf1908!",
+				department_id:1,
+				description : "1여단 정보통신대대 정보통신병"
 			},
 			{
 				id : "kokoja4",
 				rank:"일병",
-				name:"일종법",
+				name:"이청하",
 				password : "Rhkswptlf1908!",
 				department_id:1,
+				description : "1여단 정보통신대대 정보통신병"
 			},
+			{
+				id : "kokoja4",
+				rank:"일병",
+				name:"성한울",
+				password : "Rhkswptlf1908!",
+				department_id:1,
+				description : "1여단 정보통신대대 정보통신병"
+			}
 		],
 		department:[
 			{
@@ -282,7 +329,7 @@ export default new Vuex.Store({
 		},
 		[CLICK_LIST](state){
 			//리스트를 클릭시 히스토리 인덱스는 다시 고쳐져야한다.
-			state.historyIndex = state.listHistorys[state.selectedDocument].historys.length-1
+			//state.historyIndex = state.listHistorys[state.selectedDocument].historys.length-1
 			//케라우저도 돌려줘야한다.
 			state.caraRef.setActiveItem(state.historyIndex)
 
@@ -316,8 +363,8 @@ export default new Vuex.Store({
 				temp.push({
 					index:temp.length,
 					text:state.editRef.value,
-					date:'2019/10/23',
-					author:'중사 김무협'
+					date:new Date().toLocaleDateString(),
+					author:state.users[state.loginIndex].name
 				})
 				Vue.set(state.listHistorys[state.selectedDocument],'historys',temp)
 				state.historyIndex = state.listHistorys[state.selectedDocument].historys.length-1;
@@ -352,6 +399,7 @@ export default new Vuex.Store({
 				state.documentMode=false;
 				state.selectedDocument=null;
 				state.search='';
+				state.editMode = false;
 		},
 		[LODE_FILE](state){
 			state.listHistorys = listHist.listHistory.map((items) => {
@@ -360,7 +408,31 @@ export default new Vuex.Store({
 		},
 		[LOGIN_UPDATE](state,recentIndex){
 			state.loginIndex=recentIndex
+		},
+		[WRITE_READLOG](state){
+			state.readLog.push({
+				date:new Date().toLocaleDateString(),
+				author: state.users[state.loginIndex].rank + " " + state.users[state.loginIndex].name,
+				index: state.readLog.length,
+
+				title: state.listHistorys[state.selectedDocument].title,
+			})
+		},
+		[WRITE_FILE](state,title){
+			console.log(state.editRef2.value);
+			
+			state.listHistorys.push({
+				index : state.listHistorys.length,
+				title : title,
+				department_id : state.users[state.loginIndex].department_id,
+				historys:
+				[{index:0,
+				date:new Date().toLocaleDateString(),
+				author:state.users[state.loginIndex].name,
+				text:state.editRef2.value}]
+			})
 		}
+
 		
 	}
 });

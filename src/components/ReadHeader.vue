@@ -8,13 +8,13 @@
 				<el-option
 						v-for="item in documentData.historys"
 						:key="item.index"
-						:value="item.index">{{item.date}}</el-option>
+						:value="item.index">{{item.date}}     {{item.author}}</el-option>
 			</el-select>
 		</div>
 		<div class="line">
 			작성자명 
 			<el-divider direction="vertical"/>
-			<span id="textAuthor">{{title.historys[length].author}}</span>
+			<span id="textAuthor">{{title.historys[$store.state.historyIndex].author}}</span>
 			<el-divider direction="vertical"/>
 			날짜
 			<el-divider direction="vertical"/>
@@ -162,7 +162,7 @@ export default{
 
 	#textTitle{
 		display : inline-block;
-		width : 300px;
+		width : 350px;
 	}
 
 	#textAuthor, #textDate{

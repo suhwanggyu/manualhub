@@ -1,9 +1,9 @@
 <template>
-        <el-carousel arrow="always" :autoplay=false :initial-index="historyList.length -1" @change="navi" ref="cara">
+        <el-carousel arrow="always" :autoplay=false :initial-index="$store.state.historyIndex" @change="navi" ref="cara">
 				<el-carousel-item  v-for="item in historyList" :key="item.index">
 					<p v-html="item.text">{{ item.text }}</p>
 				</el-carousel-item>
-			</el-carousel>
+		</el-carousel>
 </template>
 
 <script>
