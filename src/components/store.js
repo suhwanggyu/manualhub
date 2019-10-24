@@ -43,8 +43,6 @@ export default new Vuex.Store({
 		editMode : false,
 		
 		onHistory:false,
-
-		//readLog: 기록
 			readLog:[
 			{
 				date:'2019.10.01',
