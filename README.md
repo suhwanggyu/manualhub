@@ -27,12 +27,15 @@
 1. 현재 리모트 저장소를 clone 해준다.
 
  git clone 저장소
+ 
 2. directory를 clone 해준 위치로 이동한다.
 
  cd [clone장소]
+ 
 3. 해당 디렉토리에서 node_modules를 설치해준다
 
  npm install
+ 
 ```
 
 
@@ -41,9 +44,11 @@
   1. directory를 clone 해준 위치로 이동한다.
   
    cd [clone space]
+   
   2. 컴파일 해주고 로컬 호스트 서버를 켜준다.
   
    npm run serve
+   
   3. 로컬 호스트 주소로 접속한다!
   
   ```
@@ -107,6 +112,7 @@
 ```
 ### 10. 업데이트 정보 (Change Log)
 주요 커밋 로그
-  <img src="./readmeIMG/mainPullRequest.png" alt="log"/>
+
+  <img src="./readmeIMG/mainPullRequest.PNG" alt="log"/>
 
 
