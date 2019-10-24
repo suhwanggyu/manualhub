@@ -96,28 +96,28 @@ export default new Vuex.Store({
 			date:'2019.10.24',
 			author:'일병 이종법',
 			index:0,
-			comment:'본부대 일병 이종법 입사지원서 제출 했습니다.',
+			comment:'이종법 입사지원서',
 			history_index : 1
 		},
 		{
 			date:'2019.10.24',
 			author:'일병 김명훈',
 			index:0,
-			comment:'김명훈 입사지원서 제출 했습니다.',
+			comment:'김명훈 입사지원서',
 			history_index : 2
 		},
 		{
 			date:'2019.10.25',
 			author:'일병 김민석',
 			index:0,
-			comment:'김민석 입사지원서 제출 했습니다.',
+			comment:'김민석 입사지원서',
 			history_index : 3
 		},
 		{
 			date:'2019.10.26',
 			author:'일병 김지훈',
 			index:0,
-			comment:'김지훈 입사지원서 제출 했습니다.',
+			comment:'김지훈 입사지원서',
 			history_index : 4
 		},
 		{
@@ -130,7 +130,7 @@ export default new Vuex.Store({
 			date:'2019.10.26',
 			author:'일병 이종법',
 			index:1,
-			comment:'10/26 전산용품 지원 신청하겠습니다.',
+			comment:'10/26 전산용품 지원 신청',
 			history_index : 1
 		},
 		
