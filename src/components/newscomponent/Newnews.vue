@@ -26,7 +26,7 @@ export default {
     methods:{
         clickLog(receiver_id){
                 this.$store.state.selected = receiver_id.index;
-                this.$store.state.historyIndex = receiver_id.history_ndex
+                this.$store.state.historyIndex = receiver_id.history_index
                 //히스트 설정
                 this.$store.commit(FIND_INDEX)
                 this.$store.commit(CLICK_LIST)
