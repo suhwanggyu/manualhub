@@ -34,13 +34,24 @@ WEB IDE를 통한 빠른 처리 등
 [요구사항 명세서](https://github.com/bub3690/manualhub/blob/master/readmeIMG/Web_ManualHub_Team_%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%EB%AA%85%EC%84%B8%EC%84%9C.pdf)
 
 
+***
+### 웹페이지 기능
 
+
+
+
+
+
+
+
+
+***
 
 ### 1. 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 ```
-1. 최신버전 Chrome
-2. Node.js, NPM
-3. Vue.js
+1. 최신버전 Chrome ( ver.77.0.3865 )
+2. Node.js, NPM ( v10.16.3 , 6.9.0)
+3. Vue.js ( v10.16.3 )
 4. javascript 지원 컴파일러
 ```
 
