@@ -31,7 +31,6 @@ export default{
 	},
 	methods:{
 		clickList(receiver_id){
-			console.log("aaaaaaaaaaaaaaaaaaaaaaaaaa")
 			let selectedNum = receiver_id.index;
 			//selected 업데이트
 			this.$store.state.selected=selectedNum;
@@ -41,7 +40,7 @@ export default{
 			this.$store.commit(FIND_INDEX)
 			console.log(this.$store.state.listHistorys[this.$store.state.selectedDocument].historys.length-1);
 			
-			this.$store.state.historyIndex = this.$store.state.listHistorys[this.$store.state.selectedDocument].historys.length-1;
+			this.$store.state.historyIndex = 0;
 			//리스트 클릭시 현상들
 			this.$store.commit(CLICK_LIST)
 			this.$store.commit(WRITE_READLOG);
