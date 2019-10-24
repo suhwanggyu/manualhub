@@ -35,6 +35,13 @@ export default{
 				return
 			}
 
+			
+
+
+			//comment 불러오기
+			this.$store.commit(CLICK_MODE,false)
+			this.$store.commit(CLICK_MODIFY,this.titleIn);
+
 			//comment 저장하기
 			this.$prompt('Please input your comment', 'Tip', {
 				confirmButtonText: 'OK',
@@ -45,7 +52,7 @@ export default{
 					author: this.$store.state.users[this.$store.state.loginIndex].name,
 					index: this.$store.state.selectedDocument,
 					comment: value,
-					history_index : this.$store.state.historyIndex + 1
+					history_index : this.$store.state.listHistorys[this.$store.state.selectedDocument].historys.length-1
 				});
 				this.$message({
 				type: 'success',
@@ -57,11 +64,6 @@ export default{
 				message: 'Input canceled'
 			});       
 			});
-
-
-			//comment 불러오기
-			this.$store.commit(CLICK_MODE,false)
-			this.$store.commit(CLICK_MODIFY,this.titleIn);
 
 
 		},

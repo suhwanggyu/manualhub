@@ -26,7 +26,8 @@ export default {
 		clickList(receiver_id){
 			
 			let selectedNum = receiver_id.history_index;
-
+			console.log(selectedNum);
+			
 			//document index 업데이트
 			this.$store.commit(SET_HISTORY, selectedNum )
 
