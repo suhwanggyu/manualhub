@@ -218,7 +218,7 @@ export default new Vuex.Store({
 			{
 				id : "1",
 				rank:"소령",
-				name:"최석한",
+				name:"최모모",
 				password : "1",
 				department_id:1,
 				description : "1여단 정보통신대대장"
@@ -226,7 +226,7 @@ export default new Vuex.Store({
 			{
 				id : "kokoja2",	
 				rank:"중위",
-				name:"김종태",
+				name:"김모씨",
 				password : "Rhkswptlf1908!",
 				department_id:0,
 				description : "1여단 정보통신대대 정보통신반장"
@@ -234,7 +234,7 @@ export default new Vuex.Store({
 			{
 				id : "kokoja3",
 				rank:"소위",
-				name:"한성하",
+				name:"한모씨",
 				password : "Rhkswptlf1908!",
 				department_id:1,
 				description : "1여단 정보통신대대 정보통신반 체계담당"
@@ -242,7 +242,7 @@ export default new Vuex.Store({
 			{
 				id : "kokoja4",
 				rank:"원사",
-				name:"김태익",
+				name:"김모씨",
 				password : "Rhkswptlf1908!",
 				department_id:1,
 				description : "1여단 정보통신대대 정보통신반 전산담당"
@@ -250,7 +250,7 @@ export default new Vuex.Store({
 			{
 				id : "kokoja4",
 				rank:"상사",
-				name:"김태석",
+				name:"김모씨",
 				password : "Rhkswptlf1908!",
 				department_id:1,
 				description : "1여단 정보통신대대 정보통신반 장비담당"
@@ -258,7 +258,7 @@ export default new Vuex.Store({
 			{
 				id : "kokoja4",
 				rank:"병장",
-				name:"이상수",
+				name:"이모씨",
 				password : "Rhkswptlf1908!",
 				department_id:1,
 				description : "1여단 정보통신대대 정보통신병"
@@ -292,28 +292,28 @@ export default new Vuex.Store({
 			{
 				department_id:0,
 				dept_name:"정보통신과 무선통신",
-				dept_head:"상사 윤선중",
+				dept_head:"상사 윤모씨",
 				dept_numberOfPeople:10,
 
 			},
 			{
 				department_id:1,
 				dept_name:"정보통신과",
-				dept_head:"통신과장 김민규",
+				dept_head:"통신과장 김모씨",
 				dept_numberOfPeople:30,
 
 			},
 			{
 				department_id:2,
-				dept_name:"전술 C4I 운용병",
-				dept_head:"소위 전준표",
+				dept_name:"전술 C4I 운용",
+				dept_head:"소위 전모씨",
 				dept_numberOfPeople:5,
 
 			},
 			{
 				department_id:3,
 				dept_name:"정작참모처 화생병과",
-				dept_head:"화생방통제관 김시홍",
+				dept_head:"화생방통제관 김모씨",
 				dept_numberOfPeople:5,
 
 
